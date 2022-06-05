@@ -9,39 +9,52 @@ body {
 }
 
 section {
-	margin-top: 1rem;
-	margin-bottom: 1rem;	
+	padding: 1rem;		
 	/* border: 1px solid white;	 */
 }
 
-/* BARRA DE NAVEGACION */
+section + section {
+	margin-top: 1rem;	
+}
 
-header {		
+.seccion-centrada-flex {
 	display: flex;
-	justify-content: space-between;
-	background-color: transparent;
-	height: 5rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.seccion-simple-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+
+/* CABECERA - BARRA DE NAVEGACION */
+
+header {
+	background-color: transparent;	
+	display: grid;
+	grid-template-columns: 0.25fr 1fr;
+	grid-template-rows: 3rem;
 }
 
 header > nav {	
 	display: flex;
-	justify-content: center;
+	justify-content: end;
 	align-items: center;
 }
 
-
-
 .logo-container {
-	background-color: #C60202;			
-	text-align: center;
+	background-color: #C60202;				
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center;		
 }
 
 .logo-container > h3 {
-	margin: 0;
-	top: 50%;			
+	margin: 0;	
 }
 
 #links {
@@ -51,12 +64,12 @@ header > nav {
 }
 
 #links > li > a {
-	margin: 0%;
+	margin: 0;
 	color: #EFF0F0;	
 	padding: 0.5rem;
 	display: block;
 	text-decoration: none;
-	top: 50%;
+	text-align: center;	
 }
 
 #links > li:hover {
@@ -65,28 +78,27 @@ header > nav {
 
 /* PRESENTACION */
 
-.seccion-presentacion {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	height: 25rem;
+#presentacion {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;	
+	align-items: stretch;
+	padding: 0;
+	margin-top: 0;
 }
 
-/* #izquierdo {
-
-} */
-
-#derecho {
+#panel-der {
+	background-image: url('/resources/images/imagen_presentacion.jpeg');
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
+	background-size: cover;
 	opacity: 50%;
+	/* width: 60%; */
+	flex: 1;
 }
 
-.seccion-acerca-de-mi {
-	text-align: center;
-}
+/* SECCION ACERCA DE MI */
 
-.seccion-acerca-de-mi > h2 {
+#acerca-de-mi > h2 {
 	padding-bottom: 1rem;
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -99,7 +111,7 @@ header > nav {
 	margin: 2.5%;
 }
 
-.seccion-acerca-de-mi > h5 {	
+#acerca-de-mi > h5 {	
 	font-style: italic;
 	font-weight: 100;
 	font-size: 20px;
@@ -114,16 +126,9 @@ ul {
 	padding: 0;
 }
 
-.seccion-certificados {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	vertical-align: middle;
-}
+/* SECCION CERTIFICADOS */
 
-.seccion-certificados > h2 {
+#certificados > h2 {
 	padding-bottom: 5px;
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -134,41 +139,96 @@ ul {
 #tabla-certificados {
 	border-radius: 0.75rem;	
 	border-spacing: 0px;
-	border-collapse: separate;	
+	border-collapse: collapse;	
 	margin: 2rem;
 }
 
-#tabla-certificados th {
+#tabla-certificados thead {
 	background-color: #026CCF50;
 }
 
-.habilidades-container {
+.estilo-celda {
+	padding: 2rem;
+	width: 35%;
+	text-align: center;
+}
+
+/* SECCION PROYECTOS */
+
+#proyectos {
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+.contenedor-proyectos {
 	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 1rem;
+	align-items: center;	
+}
+
+.contenedor-proyectos > li ~ li {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.info-proyecto {
+	box-sizing: content-box;
+	border-radius: 20px;
+	box-shadow: 0px 2px 2px gray;
+	width: 60%;
+}
+
+
+/* SECCION HABILIDADES */
+
+#contenedor-habilidades {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	width: 100%;
 }
 
 .habilidad {
 	box-sizing: border-box;	
 	border: 1px solid #EFF0F0;
-	margin: 20px;
 	padding: 20px;	
 	border-radius: 20px;
 	text-align: center;	
 	box-shadow: 0px 4px 6px gray;
+	margin: 1rem;
 }
 
 .habilidad > h3 {
 	border-bottom: 3px solid red;
 }
 
+/* CONTACTO */
+
 #mapa {
-	width: 30%;
+	width: 90%;
 	height: 50%;
 	filter: grayscale(100%) invert(100%);
 }
 
 .formulario-texto {
-	width: 20rem;
+	width: 100%;
 	background-color: transparent;
 	border: none;
 	border-bottom: 0.1rem solid #C60202;
+}
+
+#contactos > section {
+	flex-wrap: wrap;
+}
+
+#panel-mapa {
+	width: 40%;
+}
+
+#panel-form {
+	flex: 1;
 }

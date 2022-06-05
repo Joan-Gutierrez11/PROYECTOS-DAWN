@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Portafolio Personal</title>
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -22,14 +22,17 @@
 		</nav>
 	</header>
 	
-	<section class="seccion-presentacion" id="presentacion">
-		<div id="izquierdo">
+	<section class="seccion-centrada-flex" id="presentacion">
+		<div class="seccion-centrada-flex" id="panel-izq">
 			<h1>Portafolio Personal</h1>
-		</div>		
-		<img id="derecho" src="resources/images/imagen_presentacion.jpeg" alt="Imagen Principal">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		</div>
+		<div class="seccion-centrada-flex" id="panel-der">
+			<h1>Portafolio Personal</h1>
+		</div>				
 	</section>
 
-	<section class="seccion-acerca-de-mi" id="acerca-de-mi">
+	<section class="seccion-centrada-flex" id="acerca-de-mi">
 		<h2>Acerca de mi</h2>
 		<video src="" id="video-acerca-de" controls></video>
 		<h5>
@@ -40,39 +43,41 @@
 		</h5>		
 	</section>
 	
-	<section class="seccion-certificados" id="certificados">
+	<section class="seccion-centrada-flex" id="certificados">
 		<h2>Mis Certificados</h2>
 		<table id="tabla-certificados">
 			<thead>
 				<tr>
-					<th>Plataforma</th>
-					<th>Certificado</th>
-					<th>Fecha Emision</th>					
+					<th class="estilo-celda">Plataforma</th>
+					<th class="estilo-celda">Certificado</th>
+					<th class="estilo-celda">Fecha Emision</th>					
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Plataforma</td>
-					<td>Certificado</td>
-					<td>Fecha Emision</td>					
+					<td class="estilo-celda">Plataforma</td>
+					<td class="estilo-celda">Certificado</td>
+					<td class="estilo-celda">Fecha Emision</td>					
 				</tr>
 				<tr>
-					<td>Plataforma</td>
-					<td>Certificado</td>
-					<td>Fecha Emision</td>					
+					<td class="estilo-celda">Plataforma</td>
+					<td class="estilo-celda">Certificado</td>
+					<td class="estilo-celda">Fecha Emision</td>					
 				</tr>
 				<tr>
-					<td>Plataforma</td>
-					<td>Certificado</td>
-					<td>Fecha Emision</td>					
+					<td class="estilo-celda">Plataforma</td>
+					<td class="estilo-celda">Certificado</td>
+					<td class="estilo-celda">Fecha Emision</td>					
 				</tr>
 			</tbody>			
 		</table>
 	</section>
 	
-	<section class="seccion-proyectos" id="proyectos">
-		<h2>Mis Proyectos</h2>
-		<ul class="proyectos">
+	<section class="seccion-simple-flex" id="proyectos">
+		<div class="seccion-centrada-flex">
+			<h2>Mis Proyectos</h2>
+		</div>		
+		<ul class="contenedor-proyectos">
 			<li class="info-proyecto">				
 				<img src="" alt="">
 				<h3>Proyecto #1</h3>
@@ -91,9 +96,9 @@
 		</ul>
 	</section>
 	
-	<section class="seccion-habilidades" id="habilidades">
+	<section class="seccion-centrada-flex" id="habilidades">
 		<h2>Mis Habilidades</h2>
-		<div class="habilidades-container">			
+		<div id="contenedor-habilidades">			
 			<div class="habilidad" id="backend">				
 				<h3>Desarrollo BackEnd</h3>				
 				<ul>
@@ -122,39 +127,44 @@
 		</div>									
 	</section>
 	
-	<section class="seccion-contactos" id="contactos">
+	<section id="contactos">
 		<h2>Contacto</h2>
-		<div class="panel-izq">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4347.855031644507!2d-79.92498796143568!3d-2.1534373443354715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1654033915511!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
-		</div>
 
-		<div class="panel-der">
-			<form>
-				<ul>
-					<li>
-						<label>Nombres:</label><br>
-						<input type="text" class="formulario-texto">
-					</li>
-					<li>
-						<label>Email:</label><br>
-						<input type="text" class="formulario-texto">
-					</li>
-					<li>
-						<label>Mensaje:</label><br>
-						<textarea cols="30" rows="10" class="formulario-texto"></textarea>
-					</li>
-					<li>
-						<button type="submit" class="formulario-boton">Enviar</button>
-					</li>
-				</ul>
-			</form>
-		</div>
+		<section class="seccion-simple-flex">
+			<div id="panel-mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4347.855031644507!2d-79.92498796143568!3d-2.1534373443354715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1654033915511!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+			</div>
+	
+			<div id="panel-form">
+				<form>
+					<ul>
+						<li>
+							<label>Nombres:</label><br>
+							<input type="text" class="formulario-texto">
+						</li>
+						<li>
+							<label>Email:</label><br>
+							<input type="text" class="formulario-texto">
+						</li>
+						<li>
+							<label>Mensaje:</label><br>
+							<textarea cols="30" rows="10" class="formulario-texto"></textarea>
+						</li>
+						<li>
+							<button type="submit" class="formulario-boton">Enviar</button>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</section>		
 	</section>
 	
 	<footer>
-		<div class="logo-container">
+		<div class="logo-container" id="logo-footer">
 			<h3>JG</h3>
-		</div>		
+		</div>
+		<nav id="redes-sociales-footer">			
+		</nav>		
 	</footer>
 </body>	
 
