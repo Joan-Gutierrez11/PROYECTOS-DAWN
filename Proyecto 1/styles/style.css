@@ -17,6 +17,10 @@ section + section {
 	margin-top: 1rem;	
 }
 
+a {
+	text-decoration: none;
+}
+
 .seccion-centrada-flex {
 	display: flex;
 	flex-direction: column;
@@ -29,6 +33,10 @@ section + section {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap-reverse;
+}
+
+.panel-izq {
+	width: 39%;
 }
 
 /* CABECERA - BARRA DE NAVEGACION */
@@ -87,12 +95,11 @@ header > nav {
 	margin-top: 0;
 }
 
-#panel-der {
+#panel-imagen {
 	background-image: url('/resources/images/imagen_presentacion.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 50%;
-	/* width: 60%; */
+	opacity: 50%;	
 	flex: 1;
 }
 
@@ -147,13 +154,29 @@ ul {
 	background-color: #026CCF50;
 }
 
-.estilo-celda {
-	padding: 2rem;
-	width: 35%;
-	text-align: center;
+.estilo-celda {		
+	padding: 2rem;	
+	text-align: center;	
 }
 
+.estilo-celda > div {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.5rem;
+}
+
+.estilo-celda > div > object {
+	width: 2rem;
+	height: 2rem;
+}
+
+
 /* SECCION PROYECTOS */
+
+#titulo-proyecto {
+	width: 40%;	
+}
 
 #proyectos {
 	flex-wrap: wrap;
@@ -170,17 +193,36 @@ ul {
 }
 
 .contenedor-proyectos > li ~ li {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .info-proyecto {
 	box-sizing: content-box;
+	border: 1px solid #EFF0F0;
 	border-radius: 20px;
-	box-shadow: 0px 2px 2px gray;
-	width: 60%;
+	box-shadow: 0px 4px 6px gray;
+	width: 80%;
+	display: flex;
+	align-items: center;	
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 1rem;
+	gap: 1rem;
 }
 
+.info-proyecto > img {
+	width: 25vh;
+	height: 15vh;	
+	border-radius: 10px;	
+}
+
+@media (max-width: 1100px) {
+	.info-proyecto {		
+		flex-direction: column;
+		justify-content: center;			
+	}
+}
 
 /* SECCION HABILIDADES */
 
@@ -209,9 +251,9 @@ ul {
 /* CONTACTO */
 
 #mapa {
-	width: 90%;
-	height: 50%;
-	filter: grayscale(100%) invert(100%);
+	width: 80%;
+	height: 80%;
+	filter: grayscale(100%) invert(100%);	
 }
 
 .formulario-texto {
@@ -226,7 +268,7 @@ ul {
 }
 
 #panel-mapa {
-	width: 40%;
+	width: 50%;	
 }
 
 #panel-form {
