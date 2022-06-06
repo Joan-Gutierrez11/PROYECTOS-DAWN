@@ -19,6 +19,7 @@ section + section {
 
 a {
 	text-decoration: none;
+	color: #EFF0F0;
 }
 
 .seccion-centrada-flex {
@@ -202,10 +203,10 @@ ul {
 	border: 1px solid #EFF0F0;
 	border-radius: 20px;
 	box-shadow: 0px 4px 6px gray;
-	width: 80%;
+	width: 90%;
 	display: flex;
 	align-items: center;	
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	justify-content: flex-start;
 	padding: 1rem;
 	gap: 1rem;
@@ -215,13 +216,6 @@ ul {
 	width: 25vh;
 	height: 15vh;	
 	border-radius: 10px;	
-}
-
-@media (max-width: 1100px) {
-	.info-proyecto {		
-		flex-direction: column;
-		justify-content: center;			
-	}
 }
 
 /* SECCION HABILIDADES */
@@ -250,9 +244,13 @@ ul {
 
 /* CONTACTO */
 
+#sec-contactos {
+	flex-wrap: nowrap;
+}
+
 #mapa {
-	width: 80%;
-	height: 80%;
+	width: 70%;
+	height: 70%;
 	filter: grayscale(100%) invert(100%);	
 }
 
@@ -263,14 +261,28 @@ ul {
 	border-bottom: 0.1rem solid #C60202;
 }
 
-#contactos > section {
-	flex-wrap: wrap;
-}
-
 #panel-mapa {
-	width: 50%;	
+	width: 90%;
 }
 
 #panel-form {
-	flex: 1;
+	width: 90%;
+}
+
+
+@media (max-width: 1100px) {
+	#proyectos, #contactos > section {
+		flex-direction: column;				
+	}
+	
+	#proyectos, #contactos > section {
+		align-items: center;
+	}	
+}
+
+@media (max-width: 600px) {
+	.info-proyecto {				
+		flex-direction: column;				
+		justify-content: center;			
+	}
 }
