@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Portafolio Personal</title>
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="styles/responsive.css">
 </head>
 
 <body>
@@ -27,7 +28,9 @@
 			<h1>Portafolio Personal</h1>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 		</div>
-		<div class="seccion-centrada-flex" id="panel-imagen"></div>				
+		<div class="seccion-centrada-flex" id="panel-imagen">
+			<img src="resources/images/imagen_presentacion.jpeg" alt="presentacion">
+		</div>				
 	</section>
 
 	<section class="seccion-centrada-flex" id="acerca-de-mi">
@@ -43,47 +46,49 @@
 	
 	<section class="seccion-centrada-flex" id="certificados">
 		<h2>Mis Certificados</h2>
-		<table id="tabla-certificados">
-			<thead>
-				<tr>
-					<th class="estilo-celda">Plataforma</th>
-					<th class="estilo-celda">Certificado</th>
-					<th class="estilo-celda">Fecha Emision</th>					
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="estilo-celda">
-						<div>
-							<object data="resources/icons/coursera-icon 1.svg"></object>
-							<span>Coursera</span>
-						</div>						
-					</td>
-					<td class="estilo-celda">Web Application Technologies and Django</td>
-					<td class="estilo-celda">15-03-2022</td>					
-				</tr>
-				<tr>
-					<td class="estilo-celda">
-						<div>
-							<object data="resources/icons/udemy-3 1.svg"></object>
-							<span>Udemy</span>
-						</div>
-					</td>
-					<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
-					<td class="estilo-celda">20-04-2022</td>					
-				</tr>
-				<tr>
-					<td class="estilo-celda">
-						<div>
-							<object data="resources/icons/iconmonstr-linkedin-3 1.svg"></object>
-							<span>Linkedin</span>
-						</div>
-					</td>
-					<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
-					<td class="estilo-celda">29-04-2022</td>					
-				</tr>
-			</tbody>			
-		</table>
+		<div id="panel-tabla">
+			<table id="tabla-certificados">
+				<thead>
+					<tr>
+						<th class="estilo-celda">Plataforma</th>
+						<th class="estilo-celda">Certificado</th>
+						<th class="estilo-celda">Fecha Emision</th>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="estilo-celda">
+							<div>
+								<object data="resources/icons/coursera-icon 1.svg"></object>
+								<span>Coursera</span>
+							</div>						
+						</td>
+						<td class="estilo-celda">Web Application Technologies and Django</td>
+						<td class="estilo-celda">15-03-2022</td>					
+					</tr>
+					<tr>
+						<td class="estilo-celda">
+							<div>
+								<object data="resources/icons/udemy-3 1.svg"></object>
+								<span>Udemy</span>
+							</div>
+						</td>
+						<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
+						<td class="estilo-celda">20-04-2022</td>					
+					</tr>
+					<tr>
+						<td class="estilo-celda">
+							<div>
+								<object data="resources/icons/iconmonstr-linkedin-3 1.svg"></object>
+								<span>Linkedin</span>
+							</div>
+						</td>
+						<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
+						<td class="estilo-celda">29-04-2022</td>					
+					</tr>
+				</tbody>			
+			</table>
+		</div>
 	</section>
 	
 	<section class="seccion-simple-flex" id="proyectos">

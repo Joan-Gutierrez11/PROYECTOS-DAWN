@@ -90,18 +90,24 @@ header > nav {
 #presentacion {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap-reverse;	
+	/* flex-wrap: wrap-reverse;	 */
 	align-items: stretch;
 	padding: 0;
 	margin-top: 0;
 }
 
 #panel-imagen {
-	background-image: url('/resources/images/imagen_presentacion.jpeg');
+	/* background-image: url('/resources/images/imagen_presentacion.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 50%;	
-	flex: 1;
+	opacity: 50%;	 */
+	/* flex: 1; */
+	width: 100%;
+}
+
+#panel-imagen > img {
+	width: 100%;
+	opacity: 50%;
 }
 
 /* SECCION ACERCA DE MI */
@@ -142,6 +148,11 @@ ul {
 	text-transform: uppercase;
 	width: fit-content;
 	border-bottom: 3px solid #026CCF;
+}
+
+#panel-tabla {
+	overflow-x: auto;
+	width: 100%;
 }
 
 #tabla-certificados {
@@ -267,22 +278,4 @@ ul {
 
 #panel-form {
 	width: 90%;
-}
-
-
-@media (max-width: 1100px) {
-	#proyectos, #contactos > section {
-		flex-direction: column;				
-	}
-	
-	#proyectos, #contactos > section {
-		align-items: center;
-	}	
-}
-
-@media (max-width: 600px) {
-	.info-proyecto {				
-		flex-direction: column;				
-		justify-content: center;			
-	}
 }

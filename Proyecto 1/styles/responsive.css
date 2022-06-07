@@ -1,0 +1,22 @@
+@media (max-width: 1100px) {
+	#proyectos, #contactos > section {
+		flex-direction: column;				
+	}
+	
+	#proyectos, #contactos > section {
+		align-items: center;
+	}	
+}
+
+@media (max-width: 600px) {
+
+    #presentacion {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+	.info-proyecto {				
+		flex-direction: column;				
+		justify-content: center;			
+	}
+}
