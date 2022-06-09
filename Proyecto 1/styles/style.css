@@ -22,6 +22,18 @@ a {
 	color: #EFF0F0;
 }
 
+.titulo-seccion {
+	padding-bottom: 1rem;
+	margin: 0 auto 2rem auto;
+	text-transform: uppercase;
+	width: fit-content;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 35px;	
+	display: flex;
+	align-items: center;
+}
+
 .seccion-centrada-flex {
 	display: flex;
 	flex-direction: column;
@@ -96,6 +108,16 @@ header > nav {
 	margin-top: 0;
 }
 
+#presentacion > .panel-izq {
+	align-items: flex-start;
+	padding-left: 3rem;
+}
+
+#titulo-presentacion {
+	margin: 0;
+	margin-bottom: 2rem;
+}
+
 #panel-imagen {
 	/* background-image: url('/resources/images/imagen_presentacion.jpeg');
 	background-repeat: no-repeat;
@@ -112,11 +134,7 @@ header > nav {
 
 /* SECCION ACERCA DE MI */
 
-#acerca-de-mi > h2 {
-	padding-bottom: 1rem;
-	margin: 0 auto;
-	text-transform: uppercase;
-	width: fit-content;
+#acerca-de-mi > h2 {	
 	border-bottom: 3px solid #48A359;
 }
 
@@ -142,17 +160,8 @@ ul {
 
 /* SECCION CERTIFICADOS */
 
-#certificados > h2 {
-	padding-bottom: 5px;
-	margin: 0 auto;
-	text-transform: uppercase;
-	width: fit-content;
+#certificados > h2 {	
 	border-bottom: 3px solid #026CCF;
-}
-
-#panel-tabla {
-	overflow-x: auto;
-	width: 100%;
 }
 
 #tabla-certificados {
@@ -186,14 +195,23 @@ ul {
 
 /* SECCION PROYECTOS */
 
-#titulo-proyecto {
-	width: 40%;	
-}
-
 #proyectos {
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: center;
+	align-items: center;
+}
+
+#titulo-proyecto {
+	width: 40%;	
+	padding-left: 2rem;
+	align-items: flex-start;
+}
+
+#titulo-proyecto > h2 {
+	margin: 0;	
+	width: 40%;
+	border-bottom: 3px solid #C60202;
 }
 
 .contenedor-proyectos {
@@ -204,7 +222,7 @@ ul {
 	align-items: center;	
 }
 
-.contenedor-proyectos > li ~ li {
+.contenedor-proyectos > li {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
@@ -231,11 +249,16 @@ ul {
 
 /* SECCION HABILIDADES */
 
+#habilidades > h2 {
+	border-bottom: 3px solid #026CCF;
+}
+
 #contenedor-habilidades {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-content: space-around;
+	align-items: stretch;
 	width: 100%;
 }
 
@@ -247,13 +270,24 @@ ul {
 	text-align: center;	
 	box-shadow: 0px 4px 6px gray;
 	margin: 1rem;
+	width: 25%;
 }
 
 .habilidad > h3 {
 	border-bottom: 3px solid red;
 }
 
+.habilidad > img {
+	width: 50%;
+	height: 50%;
+}
+
 /* CONTACTO */
+
+#contactos > h2 {
+	border-bottom: 3px solid #48A359;
+}
+
 
 #sec-contactos {
 	flex-wrap: nowrap;
@@ -270,6 +304,18 @@ ul {
 	background-color: transparent;
 	border: none;
 	border-bottom: 0.1rem solid #C60202;
+}
+
+.formulario-boton {
+	background-color: #C60202;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem 2rem;
+	color: #EFF0F0;
+	margin-top: 1rem;
+	box-shadow: 0px 1px 1px gray;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 #panel-mapa {

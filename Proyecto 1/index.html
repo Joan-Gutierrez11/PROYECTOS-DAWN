@@ -25,8 +25,8 @@
 	
 	<section class="seccion-centrada-flex" id="presentacion">
 		<div class="seccion-centrada-flex panel-izq">
-			<h1>Portafolio Personal</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<h1 class="titulo-seccion" id="titulo-presentacion">Portafolio Personal</h1>
+			<p>Web Developer</p>
 		</div>
 		<div class="seccion-centrada-flex" id="panel-imagen">
 			<img src="resources/images/imagen_presentacion.jpeg" alt="presentacion">
@@ -34,7 +34,7 @@
 	</section>
 
 	<section class="seccion-centrada-flex" id="acerca-de-mi">
-		<h2>Acerca de mi</h2>
+		<h2 class="titulo-seccion">Acerca de mi</h2>
 		<video src="" id="video-acerca-de" controls></video>
 		<h5>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -45,55 +45,53 @@
 	</section>
 	
 	<section class="seccion-centrada-flex" id="certificados">
-		<h2>Mis Certificados</h2>
-		<div id="panel-tabla">
-			<table id="tabla-certificados">
-				<thead>
-					<tr>
-						<th class="estilo-celda">Plataforma</th>
-						<th class="estilo-celda">Certificado</th>
-						<th class="estilo-celda">Fecha Emision</th>					
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="estilo-celda">
-							<div>
-								<object data="resources/icons/coursera-icon 1.svg"></object>
-								<span>Coursera</span>
-							</div>						
-						</td>
-						<td class="estilo-celda">Web Application Technologies and Django</td>
-						<td class="estilo-celda">15-03-2022</td>					
-					</tr>
-					<tr>
-						<td class="estilo-celda">
-							<div>
-								<object data="resources/icons/udemy-3 1.svg"></object>
-								<span>Udemy</span>
-							</div>
-						</td>
-						<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
-						<td class="estilo-celda">20-04-2022</td>					
-					</tr>
-					<tr>
-						<td class="estilo-celda">
-							<div>
-								<object data="resources/icons/iconmonstr-linkedin-3 1.svg"></object>
-								<span>Linkedin</span>
-							</div>
-						</td>
-						<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
-						<td class="estilo-celda">29-04-2022</td>					
-					</tr>
-				</tbody>			
-			</table>
-		</div>
+		<h2 class="titulo-seccion">Mis Certificados</h2>		
+		<table id="tabla-certificados">
+			<thead>
+				<tr>
+					<th class="estilo-celda">Plataforma</th>
+					<th class="estilo-celda">Certificado</th>
+					<th class="estilo-celda">Fecha Emision</th>					
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="estilo-celda">
+						<div>
+							<object data="resources/icons/coursera-icon 1.svg"></object>
+							<span>Coursera</span>
+						</div>						
+					</td>
+					<td class="estilo-celda">Web Application Technologies and Django</td>
+					<td class="estilo-celda">15-03-2022</td>					
+				</tr>
+				<tr>
+					<td class="estilo-celda">
+						<div>
+							<object data="resources/icons/udemy-3 1.svg"></object>
+							<span>Udemy</span>
+						</div>
+					</td>
+					<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
+					<td class="estilo-celda">20-04-2022</td>					
+				</tr>
+				<tr>
+					<td class="estilo-celda">
+						<div>
+							<object data="resources/icons/iconmonstr-linkedin-3 1.svg"></object>
+							<span>Linkedin</span>
+						</div>
+					</td>
+					<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
+					<td class="estilo-celda">29-04-2022</td>					
+				</tr>
+			</tbody>			
+		</table>		
 	</section>
 	
 	<section class="seccion-simple-flex" id="proyectos">
-		<div class="seccion-centrada-flex panel-izq" id="titulo-proyecto">
-			<h2>Mis Proyectos</h2>
+		<div class="seccion-centrada-flex" id="titulo-proyecto">
+			<h2 class="titulo-seccion">Mis Proyectos</h2>
 		</div>		
 		<ul class="contenedor-proyectos">
 			<li class="info-proyecto">				
@@ -121,9 +119,10 @@
 	</section>
 	
 	<section class="seccion-centrada-flex" id="habilidades">
-		<h2>Mis Habilidades</h2>
+		<h2 class="titulo-seccion">Mis Habilidades</h2>
 		<div id="contenedor-habilidades">			
-			<div class="habilidad" id="backend">				
+			<div class="habilidad" id="backend">			
+				<img src="resources/images/backend-icon.png" alt="">	
 				<h3>Desarrollo BackEnd</h3>				
 				<ul>
 					<li>Python</li>
@@ -133,6 +132,7 @@
 			</div>
 			
 			<div class="habilidad" id="frontend">				
+				<img src="resources/images/frontend-icon.png" alt="">
 				<h3>Desarrollo FrontEnd</h3>
 				<ul>
 					<li>HTML</li>
@@ -141,6 +141,7 @@
 			</div>
 			
 			<div class="habilidad" id="herramientas">				
+				<img src="resources/images/herramientas.png" alt="">
 				<h3>Manejo de Herramientas</h3>
 				<ul>
 					<li>Git</li>
@@ -152,7 +153,7 @@
 	</section>
 	
 	<section id="contactos">
-		<h2>Contacto</h2>
+		<h2 class="titulo-seccion">Contacto</h2>
 
 		<section class="seccion-simple-flex" id="sec-contactos">
 			<div class="seccion-centrada-flex" id="panel-mapa">

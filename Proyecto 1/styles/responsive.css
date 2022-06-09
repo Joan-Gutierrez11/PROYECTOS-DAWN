@@ -1,22 +1,66 @@
 @media (max-width: 1100px) {
+	#presentacion > .panel-izq {	
+		padding-left: 0.5rem;
+		width: 40%;
+	}
+
 	#proyectos, #contactos > section {
 		flex-direction: column;				
+		align-items: center;
+	}
+
+	#video-acerca-de {	
+		width: 70%;
+	}
+
+	#titulo-proyecto {
+		width: 100%;	
+		padding: 0;
+		align-items: center;
 	}
 	
-	#proyectos, #contactos > section {
-		align-items: center;
-	}	
+	#titulo-proyecto > h2 {
+		margin: 0 auto;
+		width: fit-content;
+	}
+
+	.habilidad > img {	
+		height: 40%;
+	}
+	
 }
 
 @media (max-width: 600px) {
-
     #presentacion {
         flex-direction: column-reverse;
         align-items: center;
     }
 
+	#presentacion > .panel-izq {
+		padding: unset;
+		align-items: center;
+		width: 100%;
+	}
+
+	#titulo-presentacion {
+		margin: 0;
+		margin-top: 2rem;
+	}
+
 	.info-proyecto {				
 		flex-direction: column;				
 		justify-content: center;			
+	}
+
+	#contenedor-habilidades {
+		flex-direction: column;		
+	}
+
+	.habilidad { 
+		width: 60%;
+	}
+
+	#mapa {
+		width: 100%;	
 	}
 }
