@@ -9,10 +9,6 @@
 		align-items: center;
 	}
 
-	#video-acerca-de {	
-		width: 70%;
-	}
-
 	#titulo-proyecto {
 		width: 100%;	
 		padding: 0;
@@ -27,10 +23,20 @@
 	.habilidad > img {	
 		height: 40%;
 	}
+
+	#sec-contactos {
+		flex-direction: column;
+		align-items: center;
+	}
 	
 }
 
 @media (max-width: 600px) {
+
+	.titulo-seccion {
+		text-align: center;
+	}
+
     #presentacion {
         flex-direction: column-reverse;
         align-items: center;
@@ -45,6 +51,19 @@
 	#titulo-presentacion {
 		margin: 0;
 		margin-top: 2rem;
+	}
+
+	#video-acerca-de {	
+		width: 80%;
+	}
+
+	#tabla-certificados {
+		display: none;
+	}
+	
+	#tabla-certificados-responsive {
+		display: flex;
+		flex-direction: column;
 	}
 
 	.info-proyecto {				
@@ -63,4 +82,18 @@
 	#mapa {
 		width: 100%;	
 	}
+
+	footer > nav > .links > li > a > object {
+		width: 2rem;
+		height: 2rem;
+	}
+
+}
+
+@media (max-width: 400px) {
+
+	.estilo-celda {
+		padding: 0.75rem;
+	}
+
 }

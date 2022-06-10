@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Portafolio Personal</title>
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link href="styles/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 			<h3>JG</h3>
 		</div>		
 		<nav>
-			<ul id="links">
+			<ul class="links">
 				<li><a href="#acerca-de-mi">Acerca de mi</a></li>
 				<li><a href="#proyectos">Proyectos</a></li>
 				<li><a href="#contactos">Contacto</a></li>
@@ -58,7 +58,7 @@
 				<tr>
 					<td class="estilo-celda">
 						<div>
-							<object data="resources/icons/coursera-icon 1.svg"></object>
+							<object data="resources/icons/coursera-icon.svg"></object>
 							<span>Coursera</span>
 						</div>						
 					</td>
@@ -68,7 +68,7 @@
 				<tr>
 					<td class="estilo-celda">
 						<div>
-							<object data="resources/icons/udemy-3 1.svg"></object>
+							<object data="resources/icons/udemy-icon.svg"></object>
 							<span>Udemy</span>
 						</div>
 					</td>
@@ -78,7 +78,7 @@
 				<tr>
 					<td class="estilo-celda">
 						<div>
-							<object data="resources/icons/iconmonstr-linkedin-3 1.svg"></object>
+							<object data="resources/icons/linkedin-icon.svg"></object>
 							<span>Linkedin</span>
 						</div>
 					</td>
@@ -86,7 +86,83 @@
 					<td class="estilo-celda">29-04-2022</td>					
 				</tr>
 			</tbody>			
-		</table>		
+		</table>
+		
+		<!-- Esta parte es la tabla que se mostrara en el momento que el tamano de la pantalla se reduzca -->
+		<div id="tabla-certificados-responsive">
+			<table>
+				<thead>
+					<tr>						
+						<td class="estilo-celda">Plataforma</td>
+						<td class="estilo-celda estilo-celda-responsive">
+							<div>
+								<object data="resources/icons/coursera-icon.svg"></object>
+								<span>Coursera</span>
+							</div>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="estilo-celda">Certificado</td>
+						<td class="estilo-celda">Web Application Technologies and Django</td>					
+					</tr>
+					<tr>
+						<td class="estilo-celda">Fecha Emision</td>
+						<td class="estilo-celda">15-03-2022</td>					
+					</tr>
+				</tbody>			
+			</table>
+
+			<table>
+				<thead>
+					<tr>						
+						<td class="estilo-celda">Plataforma</td>
+						<td class="estilo-celda  estilo-celda-responsive">
+							<div>
+								<object data="resources/icons/udemy-icon.svg"></object>
+								<span>Udemy</span>
+							</div>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="estilo-celda">Certificado</td>
+						<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
+					</tr>
+					<tr>
+						<td class="estilo-celda">Fecha Emision</td>
+						<td class="estilo-celda">20-04-2022</td>
+					</tr>
+				</tbody>			
+			</table>
+
+			<table>
+				<thead>
+					<tr>						
+						<td class="estilo-celda">Plataforma</td>
+						<td class="estilo-celda estilo-celda-responsive">
+							<div>
+								<object data="resources/icons/linkedin-icon.svg"></object>
+								<span>Linkedin</span>
+							</div>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="estilo-celda">Certificado</td>
+						<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
+					</tr>
+					<tr>
+						<td class="estilo-celda">Fecha Emision</td>						
+						<td class="estilo-celda">29-04-2022</td>
+					</tr>
+				</tbody>			
+			</table>
+						
+		</div>		
 	</section>
 	
 	<section class="seccion-simple-flex" id="proyectos">
@@ -155,9 +231,9 @@
 	<section id="contactos">
 		<h2 class="titulo-seccion">Contacto</h2>
 
-		<section class="seccion-simple-flex" id="sec-contactos">
+		<div class="seccion-simple-flex" id="sec-contactos">
 			<div class="seccion-centrada-flex" id="panel-mapa">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4347.855031644507!2d-79.92498796143568!3d-2.1534373443354715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1654033915511!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+				<iframe title="Mapa Ubicacion" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4347.855031644507!2d-79.92498796143568!3d-2.1534373443354715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1654033915511!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
 			</div>
 	
 			<div id="panel-form">
@@ -181,14 +257,31 @@
 					</ul>
 				</form>
 			</div>
-		</section>		
+		</div>		
 	</section>
 	
 	<footer>
 		<div class="logo-container" id="logo-footer">
 			<h3>JG</h3>
 		</div>
-		<nav id="redes-sociales-footer">			
+		<nav>
+			<ul class="links">
+				<li>
+					<a href="">
+						<object data="resources/icons/Linkedin-red-social.svg"></object>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<object data="resources/icons/Github-red-social.svg"></object>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<object data="resources/icons/Facebook-red-social.svg"></object>
+					</a>
+				</li>
+			</ul>			
 		</nav>		
 	</footer>
 </body>	

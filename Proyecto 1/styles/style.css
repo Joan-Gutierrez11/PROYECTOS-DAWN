@@ -78,13 +78,13 @@ header > nav {
 	margin: 0;	
 }
 
-#links {
+.links {
 	display: flex;
 	justify-content: center;
 	vertical-align: middle;
 }
 
-#links > li > a {
+.links > li > a {
 	margin: 0;
 	color: #EFF0F0;	
 	padding: 0.5rem;
@@ -139,7 +139,7 @@ header > nav {
 }
 
 #video-acerca-de {	
-	width: 50%;
+	width: 60%;
 	margin: 2.5%;
 }
 
@@ -164,14 +164,18 @@ ul {
 	border-bottom: 3px solid #026CCF;
 }
 
-#tabla-certificados {
+table {
 	border-radius: 0.75rem;	
 	border-spacing: 0px;
 	border-collapse: collapse;	
 	margin: 2rem;
 }
 
-#tabla-certificados thead {
+#tabla-certificados-responsive {
+	display: none;	
+}
+
+#tabla-certificados thead , #tabla-certificados-responsive thead{
 	background-color: #026CCF50;
 }
 
@@ -190,6 +194,14 @@ ul {
 .estilo-celda > div > object {
 	width: 2rem;
 	height: 2rem;
+}
+
+.estilo-celda-responsive > div {
+	justify-content: center;
+}
+
+.estilo-celda-responsive > div > table {
+	width: 100%;
 }
 
 
@@ -324,4 +336,34 @@ ul {
 
 #panel-form {
 	width: 90%;
+}
+
+#panel-form form ul li {
+	margin-top: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+	display: grid;
+	grid-template-columns: 0.25fr 1fr;
+	grid-template-rows: 3rem;	
+}
+
+footer > nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer > nav > .links > li > a {	
+	padding-bottom: 0rem;
+	padding-top: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+footer > nav > .links > li > a > object {
+	width: 2.5rem;
+	height: 2.5rem;
 }
