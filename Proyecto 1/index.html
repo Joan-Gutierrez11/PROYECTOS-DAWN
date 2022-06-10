@@ -16,9 +16,9 @@
 		</div>		
 		<nav>
 			<ul class="links">
-				<li><a href="#acerca-de-mi">Acerca de mi</a></li>
-				<li><a href="#proyectos">Proyectos</a></li>
-				<li><a href="#contactos">Contacto</a></li>
+				<li><a href="#acerca-de-mi" class="referencia-secciones">Acerca de mi</a></li>
+				<li><a href="#proyectos" class="referencia-secciones">Proyectos</a></li>
+				<li><a href="#contactos" class="referencia-secciones">Contacto</a></li>
 			</ul>			
 		</nav>
 	</header>
@@ -35,7 +35,7 @@
 
 	<section class="seccion-centrada-flex" id="acerca-de-mi">
 		<h2 class="titulo-seccion">Acerca de mi</h2>
-		<video src="" id="video-acerca-de" controls></video>
+		<video src="resources/video/1-Minute-Sample-Video.mp4" id="video-acerca-de" controls></video>
 		<h5>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 			Beatae, repellat? Incidunt, dignissimos itaque minus totam, 
@@ -46,47 +46,49 @@
 	
 	<section class="seccion-centrada-flex" id="certificados">
 		<h2 class="titulo-seccion">Mis Certificados</h2>		
-		<table id="tabla-certificados">
-			<thead>
-				<tr>
-					<th class="estilo-celda">Plataforma</th>
-					<th class="estilo-celda">Certificado</th>
-					<th class="estilo-celda">Fecha Emision</th>					
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="estilo-celda">
-						<div>
-							<object data="resources/icons/coursera-icon.svg"></object>
-							<span>Coursera</span>
-						</div>						
-					</td>
-					<td class="estilo-celda">Web Application Technologies and Django</td>
-					<td class="estilo-celda">15-03-2022</td>					
-				</tr>
-				<tr>
-					<td class="estilo-celda">
-						<div>
-							<object data="resources/icons/udemy-icon.svg"></object>
-							<span>Udemy</span>
-						</div>
-					</td>
-					<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
-					<td class="estilo-celda">20-04-2022</td>					
-				</tr>
-				<tr>
-					<td class="estilo-celda">
-						<div>
-							<object data="resources/icons/linkedin-icon.svg"></object>
-							<span>Linkedin</span>
-						</div>
-					</td>
-					<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
-					<td class="estilo-celda">29-04-2022</td>					
-				</tr>
-			</tbody>			
-		</table>
+		<div id="tabla-certificados-inicial">
+			<table id="tabla-certificados">
+				<thead>
+					<tr>
+						<th class="estilo-celda">Plataforma</th>
+						<th class="estilo-celda">Certificado</th>
+						<th class="estilo-celda">Fecha Emision</th>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="estilo-celda">
+							<div>
+								<object data="resources/icons/coursera-icon.svg"></object>
+								<span>Coursera</span>
+							</div>						
+						</td>
+						<td class="estilo-celda">Web Application Technologies and Django</td>
+						<td class="estilo-celda">15-03-2022</td>					
+					</tr>
+					<tr>
+						<td class="estilo-celda">
+							<div>
+								<object data="resources/icons/udemy-icon.svg"></object>
+								<span>Udemy</span>
+							</div>
+						</td>
+						<td class="estilo-celda">Aprende JavaScript y Jquery de 0 a 100</td>
+						<td class="estilo-celda">20-04-2022</td>					
+					</tr>
+					<tr>
+						<td class="estilo-celda">
+							<div>
+								<object data="resources/icons/linkedin-icon.svg"></object>
+								<span>Linkedin</span>
+							</div>
+						</td>
+						<td class="estilo-celda">Java: Mapeo objeto-relacional esencial</td>
+						<td class="estilo-celda">29-04-2022</td>					
+					</tr>
+				</tbody>			
+			</table>
+		</div>
 		
 		<!-- Esta parte es la tabla que se mostrara en el momento que el tamano de la pantalla se reduzca -->
 		<div id="tabla-certificados-responsive">
@@ -170,26 +172,32 @@
 			<h2 class="titulo-seccion">Mis Proyectos</h2>
 		</div>		
 		<ul class="contenedor-proyectos">
-			<li class="info-proyecto">				
-				<img src="resources/images/snake-game.jpg" alt="snake game">
-				<div>
-					<a href="https://github.com/Joan-Gutierrez11/Snake-Game-Pygame"><h3>Snake Game (Python)</h3></a>
-					<p>El juego de Snake hecho con Pygame</p>				
-				</div>				
+			<li class="info-proyecto">
+				<a href="https://github.com/Joan-Gutierrez11/Snake-Game-Pygame">
+					<img src="resources/images/snake-game.jpg" alt="snake game">
+					<div>
+						<h3>Snake Game (Python)</h3>
+						<p>El juego de Snake hecho con Pygame</p>				
+					</div>				
+				</a>								
 			</li>
 			<li class="info-proyecto">				
-				<img src="resources/images/efecto-matrix.png" alt="">
-				<div>
-					<a href="https://github.com/Joan-Gutierrez11/Matrix-JS"><h3>Efecto Matrix (JS)</h3></a>
-					<p>Efecto Matrix hecho en Javascript con Canvas</p>				
-				</div>				
+				<a href="https://github.com/Joan-Gutierrez11/Matrix-JS">
+					<img src="resources/images/efecto-matrix.png" alt="">
+					<div>
+						<h3>Efecto Matrix (JS)</h3>
+						<p>Efecto Matrix hecho en Javascript con Canvas</p>				
+					</div>				
+				</a>				
 			</li>
 			<li class="info-proyecto">				
-				<img src="resources/images/rest-student-service.png" alt="">
-				<div>
-					<a href="https://github.com/Joan-Gutierrez11/Simple-Student-REST-Service"><h3>Servicio REST de Estudiantes (Java)</h3></a>
-					<p>Servicio REST hecho en Java 11 Spring y MySQL</p>				
-				</div>				
+				<a href="https://github.com/Joan-Gutierrez11/Simple-Student-REST-Service">
+					<img src="resources/images/rest-student-service.png" alt="">
+					<div>
+						<h3>Servicio REST de Estudiantes (Java)</h3>
+						<p>Servicio REST hecho en Java 11 Spring y MySQL</p>				
+					</div>				
+				</a>				
 			</li>
 		</ul>
 	</section>
@@ -267,18 +275,18 @@
 		<nav>
 			<ul class="links">
 				<li>
-					<a href="">
-						<object data="resources/icons/Linkedin-red-social.svg"></object>
+					<a href="https://www.linkedin.com/in/joan-gutierrez-056619202/" class="referencia-redes">
+						<img src="resources/icons/Linkedin.png" alt="Linkedin">
 					</a>
 				</li>
 				<li>
-					<a href="">
-						<object data="resources/icons/Github-red-social.svg"></object>
+					<a href="https://github.com/Joan-Gutierrez11" class="referencia-redes">
+						<img src="resources/icons/Github.png" alt="Github">
 					</a>
 				</li>
 				<li>
-					<a href="">
-						<object data="resources/icons/Facebook-red-social.svg"></object>
+					<a href="" class="referencia-redes">
+						<img src="resources/icons/Facebook.png" alt="Facebook">
 					</a>
 				</li>
 			</ul>			

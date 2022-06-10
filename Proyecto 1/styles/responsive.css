@@ -57,7 +57,7 @@
 		width: 80%;
 	}
 
-	#tabla-certificados {
+	#tabla-certificados-inicial {
 		display: none;
 	}
 	
@@ -66,7 +66,7 @@
 		flex-direction: column;
 	}
 
-	.info-proyecto {				
+	.info-proyecto > a {				
 		flex-direction: column;				
 		justify-content: center;			
 	}
@@ -76,14 +76,14 @@
 	}
 
 	.habilidad { 
-		width: 60%;
+		width: 70%;
 	}
 
 	#mapa {
 		width: 100%;	
 	}
 
-	footer > nav > .links > li > a > object {
+	.referencia-redes > img {
 		width: 2rem;
 		height: 2rem;
 	}
