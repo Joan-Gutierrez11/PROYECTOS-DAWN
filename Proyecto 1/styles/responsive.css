@@ -71,6 +71,10 @@
 		justify-content: center;			
 	}
 
+	.contenedor-proyectos > li {
+		text-align: center;
+	}
+
 	#contenedor-habilidades {
 		flex-direction: column;		
 	}

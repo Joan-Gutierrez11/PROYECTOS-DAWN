@@ -210,14 +210,14 @@ table {
 }
 
 #titulo-proyecto {
-	width: 40%;	
+	width: 30%;	
 	padding-left: 2rem;
 	align-items: flex-start;
 }
 
 #titulo-proyecto > h2 {
 	margin: 0;	
-	width: 40%;
+	/* width: 40%; */
 	border-bottom: 3px solid #C60202;
 }
 
@@ -250,11 +250,29 @@ table {
 	gap: 1rem;
 }
 
-.info-proyecto > a > img {
+.img-proyecto {
+	flex: 0 0 50%;
+	position: relative;
+	height: 10rem;
+	border-radius: 5rem;
+}
+
+.img-proyecto > img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+}
+
+.cont-proyecto {
+	flex:1;
+}
+
+/* .info-proyecto > a > img {
 	width: 25vh;
 	height: 15vh;	
 	border-radius: 10px;	
-}
+} */
 
 /* SECCION HABILIDADES */
 
