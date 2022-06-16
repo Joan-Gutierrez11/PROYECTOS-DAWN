@@ -5,7 +5,7 @@ body {
 	background-color: #2A2A2A;
 	color: #EFF0F0;
 	padding: 0;
-	margin: 0;
+	margin: 0;	
 }
 
 section {
@@ -134,15 +134,14 @@ header > nav {
 }
 
 #video-acerca-de {	
-	width: 60%;
+	width: 50%;
 	margin: 2.5%;
 }
 
-#acerca-de-mi > h5 {	
+#acerca-de-mi > p {	
 	font-style: italic;
-	font-weight: 100;
-	font-size: 20px;
-	line-height: 20px;
+	font-weight: 100;	
+	line-height: 30px;
 	display: flex;
 	align-items: center;
 	text-align: center;
@@ -163,7 +162,7 @@ table {
 	border-radius: 0.75rem;	
 	border-spacing: 0px;
 	border-collapse: collapse;	
-	margin: 2rem;
+	margin: 2em;
 }
 
 #tabla-certificados-responsive {
@@ -175,7 +174,7 @@ table {
 }
 
 .estilo-celda {		
-	padding: 2rem;	
+	padding: 2em;	
 	text-align: center;	
 }
 
@@ -251,9 +250,9 @@ table {
 }
 
 .img-proyecto {
-	flex: 0 0 50%;
+	flex: 0 0 40%;
 	position: relative;
-	height: 10rem;
+	height: 20vh;
 	border-radius: 5rem;
 }
 
