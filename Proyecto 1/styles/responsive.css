@@ -42,6 +42,10 @@
 
 @media (max-width: 1000px) {
 
+	.logo-container > img {
+		width: 70%;
+	}
+
 	#contenedor-habilidades {
 		flex-direction: column;		
 	}
@@ -96,6 +100,10 @@
 	#tabla-certificados-responsive {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.estilo-celda {		
+		padding: 1em;	
 	}
 
 	.contenedor-proyectos > li {

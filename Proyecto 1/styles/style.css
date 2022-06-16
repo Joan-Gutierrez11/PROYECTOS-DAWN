@@ -57,7 +57,7 @@ a {
 header {
 	background-color: transparent;	
 	display: grid;
-	grid-template-columns: 0.25fr 1fr;
+	grid-template-columns: 0.15fr 1fr;
 	grid-template-rows: 3rem;
 }
 
@@ -71,11 +71,12 @@ header > nav {
 	background-color: #C60202;				
 	display: flex;
 	justify-content: center;
-	align-items: center;		
+	align-items: center;	
 }
 
-.logo-container > h3 {
-	margin: 0;	
+.logo-container > img {
+	width: 40%;
+	height: 100%;
 }
 
 .links {
@@ -267,12 +268,6 @@ table {
 	flex:1;
 }
 
-/* .info-proyecto > a > img {
-	width: 25vh;
-	height: 15vh;	
-	border-radius: 10px;	
-} */
-
 /* SECCION HABILIDADES */
 
 #habilidades > h2 {
@@ -360,7 +355,7 @@ table {
 
 footer {
 	display: grid;
-	grid-template-columns: 0.25fr 1fr;
+	grid-template-columns: 0.15fr 1fr;
 	grid-template-rows: 3rem;	
 }
 
