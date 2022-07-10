@@ -1,12 +1,6 @@
 // const domain = "https://www.cheapshark.com/";
 // const storesURL = domain + "api/1.0/stores";
-
-const dealsURL = domain + "api/1.0/deals";
-
-async function getData(urlData) {
-    let response = await fetch(urlData);
-    return response.json();
-}
+// const dealsURL = domain + "api/1.0/deals";
 
 const updateStoresAvailables = async () => {
     let numberStoresTag = document.querySelector('#number-of-stores > .card-header > .text-end > h4');
