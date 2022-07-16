@@ -2,62 +2,38 @@
 // const storesURL = domain + "api/1.0/stores";
 // const dealsURL = domain + "api/1.0/deals";
 
-const updateStoresAvailables = async () => {
+const updateStoresAvailables = (dataStores) => {
     let numberStoresTag = document.querySelector('#number-of-stores > .card-header > .text-end > h4');
     let addInfoTag = document.querySelector('#number-of-stores > .card-footer');
-    let data = await getData(storesURL);
     
-    let availableStores = 0;
-    for (let store of data) {
-        if(Boolean(store['isActive']))
-            availableStores++;
-    }
-
+    let availableStores = Array.from(dataStores).filter(store => Boolean(store['isActive'])).length;
     numberStoresTag.innerHTML = availableStores;
-    let percent = availableStores/data.length * 100;    
+
+    let percent = availableStores/dataStores.length * 100;    
     addInfoTag.innerHTML = `<p class="mb-0">
                                 <span class="text-success text-sm font-weight-bolder">${percent.toFixed(2)}% </span> 
                                 of stores have information available
                             </p>`;
 }
 
-const updatePercentageGames = async () => {
+const updatePercentageGames = (dataDeals) => {
     let percentageGamesTag = document.querySelector('#percentage-of-games > .card-header > .text-end > h4');
     let addInfoTag = document.querySelector('#percentage-of-games > .card-footer');
+    
+    let numGamesDiscount = Array.from(dataDeals).filter(deal => deal['savings'] > 90).length;
+    let percent = numGamesDiscount/dataDeals.length * 100;
 
-    let data = await getData(dealsURL);
-
-    let numGamesDiscount = 0;
-    for (let deal of data) {
-        if(deal['savings'] > 90)
-            numGamesDiscount++;
-    }
-
-    let percent = numGamesDiscount/data.length * 100;
     percentageGamesTag.innerHTML = String(percent.toFixed(2)) + '%';
     addInfoTag.innerHTML = `<p class="mb-0">Have a discount of more than 90%</p>`;
 }
 
-const updateAAAGames = async () => {
+const updateAAAGames = (dataDeals) => {
     let tripleAGamesTag = document.querySelector('#aaa-games > .card-header > .text-end > h4');
     let addInfoTag = document.querySelector('#aaa-games > .card-footer');
 
-    let data = await getData(dealsURL);
+    let numGamesAAA = Array.from(dataDeals).filter(deal => deal['normalPrice'] > 25).length;
+    let percent = numGamesAAA/dataDeals.length * 100;
 
-    let numGamesAAA = 0;
-    for (let deal of data) {
-        if(deal['normalPrice'] > 25)
-            numGamesAAA++;
-    }
-
-    let percent = numGamesAAA/data.length * 100;
     tripleAGamesTag.innerHTML = String(percent.toFixed(2)) + '%';
     addInfoTag.innerHTML = `<p class="mb-0">Have a discount</p>`;
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateStoresAvailables();
-    updatePercentageGames();
-    updateAAAGames();
-});

@@ -1,3 +1,9 @@
+
+/**
+ * Funcion que devuelve una etiqueta que varia dependiendo del puntaje del juego
+ * @param {Number} score 
+ * @returns 
+ */
 function getBadgeMetacritic(score) {
     if(score >= 70)
         return `<span class="badge bg-gradient-success">${score}</span>`;
@@ -7,15 +13,18 @@ function getBadgeMetacritic(score) {
         return `<span class="badge bg-gradient-danger">${score}</span>`;    
 }
 
-const getDealsDefault = async () => {
-    let dataDeals = await getData("https://www.cheapshark.com/api/1.0/deals");
+/**
+ * Funcion que actualiza el cuerpo de la tabla de ofertas
+ * @param {JSON} dataDeals Arreglo con objetos JSON de las ofertas
+ */
+const getDeals = (dataDeals) => {    
     let tableBodyDeals = document.querySelector('#table-deals > .card-body table > tbody');
 
-    let template;
+    let template = ``;
     for (let deal of dataDeals) {
         let critic = getBadgeMetacritic(parseInt(deal['metacriticScore']));
 
-        template = `<tr>
+        template += `<tr>
                         <td class="ps-4 text-secondary text-xxs font-weight-bolder opacity-7">                        
                             <p class="mb-0">${deal['title']}</p>                                            
                         </td>
@@ -27,10 +36,8 @@ const getDealsDefault = async () => {
                         </td>
                         <td class="align-middle text-center">${parseFloat(deal['savings']).toFixed(2)} %</td>
                         <td class="align-middle text-center">${critic}</td>                      
-                    </tr>`;   
-
-        tableBodyDeals.innerHTML += template;
+                    </tr>`;           
     }
-}
 
-document.addEventListener('DOMContentLoaded', getDealsDefault);
+    tableBodyDeals.innerHTML = template;
+}
