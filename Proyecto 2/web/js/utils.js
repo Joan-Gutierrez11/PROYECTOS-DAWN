@@ -1,6 +1,7 @@
 const domain = "https://www.cheapshark.com/"; //URL DE LA API
 const storesURL = domain + "api/1.0/stores"; //URL PARA OBTENER INFORMACION DE LAS TIENDAS
 const dealsURL = domain + "api/1.0/deals"; //URL PARA OBTENER INFORMACION DE LAS OFERTAS
+const gameSearchURL = domain + "api/1.0/games";
 
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 

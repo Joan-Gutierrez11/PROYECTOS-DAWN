@@ -11,8 +11,8 @@ const updateStoresAvailables = (dataStores) => {
 
     let percent = availableStores/dataStores.length * 100;    
     addInfoTag.innerHTML = `<p class="mb-0">
-                                <span class="text-success text-sm font-weight-bolder">${percent.toFixed(2)}% </span> 
-                                of stores have information available
+                                <span class="text-success text-sm font-weight-bolder"> ${percent.toFixed(2)}% </span> 
+                                de las tiendas tienen info. disponible
                             </p>`;
 }
 
@@ -24,7 +24,7 @@ const updatePercentageGames = (dataDeals) => {
     let percent = numGamesDiscount/dataDeals.length * 100;
 
     percentageGamesTag.innerHTML = String(percent.toFixed(2)) + '%';
-    addInfoTag.innerHTML = `<p class="mb-0">Have a discount of more than 90%</p>`;
+    addInfoTag.innerHTML = `<p class="mb-0">Tienen un descuento mayor al 90%</p>`;
 }
 
 const updateAAAGames = (dataDeals) => {
@@ -35,5 +35,5 @@ const updateAAAGames = (dataDeals) => {
     let percent = numGamesAAA/dataDeals.length * 100;
 
     tripleAGamesTag.innerHTML = String(percent.toFixed(2)) + '%';
-    addInfoTag.innerHTML = `<p class="mb-0">Have a discount</p>`;
+    addInfoTag.innerHTML = `<p class="mb-0">Estan en oferta</p>`;
 }

@@ -1,16 +1,22 @@
 
 /**
- * Funcion que devuelve una etiqueta que varia dependiendo del puntaje del juego
+ * Funcion que devuelve una etiqueta que varia dependiendo del puntaje del juego o si no tiene una critica
  * @param {Number} score 
  * @returns 
  */
-function getBadgeMetacritic(score) {
-    if(score >= 70)
-        return `<span class="badge bg-gradient-success">${score}</span>`;
-    if(score >= 50 && score < 70)
-        return `<span class="badge bg-gradient-warning">${score}</span>`;
-    if(score < 50)
-        return `<span class="badge bg-gradient-danger">${score}</span>`;    
+function getBadgeMetacritic(game) {
+    let score = parseInt(game['metacriticScore']);
+    let metaCriticLink = game['metacriticLink'];
+
+    if(metaCriticLink){
+        if(score >= 70)
+            return `<span class="badge bg-gradient-success">${score}</span>`;
+        if(score >= 50 && score < 70)
+            return `<span class="badge bg-gradient-warning">${score}</span>`;
+        if(score < 50)
+            return `<span class="badge bg-gradient-danger">${score}</span>`;    
+    }
+    return `<span class="badge bg-gradient-secondary">N/A</span>`;    
 }
 
 /**
@@ -19,10 +25,17 @@ function getBadgeMetacritic(score) {
  */
 const getDeals = (dataDeals) => {    
     let tableBodyDeals = document.querySelector('#table-deals > .card-body table > tbody');
-
     let template = ``;
+
+    if(dataDeals.length == 0){
+        tableBodyDeals.innerHTML = `<tr>
+                                        <td colspan="5" class="text-center">No hay informacion disponible por el momento</td>
+                                    </tr>`;
+        return;
+    }
+        
     for (let deal of dataDeals) {
-        let critic = getBadgeMetacritic(parseInt(deal['metacriticScore']));
+        let critic = getBadgeMetacritic(deal);
 
         template += `<tr>
                         <td class="ps-4 text-secondary text-xxs font-weight-bolder opacity-7">                        

@@ -27,7 +27,7 @@ function getStores(data) {
 
 
 function getAvailable(active) {
-    return active ? '<span class="badge bg-gradient-success">Available</span>' : '<span class="badge bg-gradient-danger">Not Available</span>';
+    return active ? '<span class="badge bg-gradient-success">Disponible</span>' : '<span class="badge bg-gradient-danger">No Disponible </span>';
 }
 
 function chargeStoreTable(data) {

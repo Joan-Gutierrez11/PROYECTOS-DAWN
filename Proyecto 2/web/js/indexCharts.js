@@ -116,13 +116,7 @@ const createChartOfDeals = (data) => {
     }
   });
 
-  document.querySelector('#offer-data-days').innerHTML = `<h6 class="mb-0 ">Juegos puestos en ofertas</h6>
-                                                          <p class="text-sm ">Diariamente</p>
-                                                          <hr class="dark horizontal">
-                                                          <div class="d-flex">
-                                                              <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                                              <p class="mb-0 text-sm">Datos obtenidos de los ultimos ${keys.length} dias</p>
-                                                          </div>`;
+  document.querySelector('#offer-data-days > .d-flex > p').innerHTML = `Datos obtenidos de los ultimos ${keys.length} dias`;
 };
 
 const createChartOfDiscounts = (data, loaderFunction) => {
@@ -139,9 +133,9 @@ const createChartOfDiscounts = (data, loaderFunction) => {
             label: 'Discounts',
             data: values,
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)',
+                'rgb(99, 255, 168)',
+                'rgb(227, 7, 111)',
+                'rgb(255, 100, 8)',
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
                 'rgb(255, 205, 86)',
@@ -156,17 +150,13 @@ const createChartOfDiscounts = (data, loaderFunction) => {
             display: true,
             position: 'right',
           }
-        },
-        animation:{
-          duration: 2000,
-          onProgress: function(animation){
-            loaderFunction(animation, discountsDict);
-          }
-        },
+        },        
         interaction: {
           intersect: false,
           mode: 'index',
         },            
     }
   });
+
+  document.querySelector('#offer-data-discounts > .d-flex > p').innerHTML = `Datos obtenidos de alrededor de ${data.length} juegos`;
 };
