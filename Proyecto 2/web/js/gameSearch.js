@@ -16,8 +16,7 @@ function getGamesSearch(data) {
 
     document.querySelectorAll('.enlace').forEach(elem => {
         elem.addEventListener('click', () => {            
-            sessionStorage.setItem('idJuego', elem.parentNode.querySelector('p').innerHTML)            
-            console.log(elem.parentNode.querySelector('p').innerHTML);
+            sessionStorage.setItem('idJuego', elem.parentNode.querySelector('p').innerHTML)                        
         })
     })
 }

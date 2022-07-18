@@ -10,7 +10,7 @@ function createDictionaryStores(dataStores) {
     Array.from(dataStores).forEach(store => {
         dict[store['storeID']] = {
             "name": store['storeName'],
-            "logo": domain + store['images']['logo']
+            "icon": domain + store['images']['icon']
         }
     });
     return dict;
@@ -18,9 +18,9 @@ function createDictionaryStores(dataStores) {
 
 /**
  * Funcion para crear el diccionario que funcionara para crear el grafico
- * @param {*} dataDeals 
- * @param {*} dictStores 
- * @returns 
+ * @param {*} dataDeals arreglo con los datos de los juegos 
+ * @param {*} dictStores Diccionario en donde estan almacenadas las tiendas 
+ * @returns un diccionario con los datos escenciales para crear la grafica
  */
 function getDataForChart(dataDeals, dictStores) {
     let dataChart = {}
@@ -38,11 +38,23 @@ function getDataForChart(dataDeals, dictStores) {
  * Funcion para crear el grafico de descuentos
  * @param {*} dataChart 
  */
-function createChartDiscount(dataChart) {
+function createChartDiscount(dataChart, storesDict) {
     let ctx = document.getElementById('saving-charts');
 
     let keys = Object.keys(dataChart);
     let values = keys.map(k => dataChart[k]);
+
+    let sum = 0;
+    for (let disct of values)
+        sum += disct;    
+
+    if(sum == 0){
+        let elem = document.createElement('h4');
+        elem.innerText = "NO HAY OFERTAS PARA ESTE JUEGO POR EL MOMENTO";
+        elem.className = "text-center my-5";
+        ctx.replaceWith(elem);        
+        return;
+    }
 
     let colors = (rgbColor, num) => {
         let list = [];
@@ -55,27 +67,36 @@ function createChartDiscount(dataChart) {
     }
     
     new Chart(ctx, {
-        type: 'bar',// Tipo de gráfica
+        type: 'bar',
         data: {
             labels: keys,
             datasets: [{
-                label: 'Descuentos',
+                label: 'Descuento',
                 data: values,
                 backgroundColor: colors('rgb(54, 162, 235)', keys.length),
             }]            
         },
-        options: {
+        options: {           
+            scaleLabel: {
+                display: true,
+                labelString: "Percentage"
+            },
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
+                y: {
+                    ticks: {                        
+                        callback: function(value, index, values) {
+                            return value + '%';
+                        }
                     }
-                }],
+                },                             
             },
         }
     });
 }
 
+/**
+ * CARGAMOS TODA LA INFORMACION NECESARIA CON RESPECTO AL JUEGO PARA EMPEZAR A MOSTRARLA
+ */
 document.addEventListener('DOMContentLoaded', async () =>{
     let idJuego = sessionStorage.getItem('idJuego');
 
@@ -90,6 +111,6 @@ document.addEventListener('DOMContentLoaded', async () =>{
 
     let storesDict = createDictionaryStores(dataStores);
     let dataChart = getDataForChart(dataDeals['deals'], storesDict);
-    createChartDiscount(dataChart);
+    createChartDiscount(dataChart, storesDict);
 });
 
