@@ -42,7 +42,7 @@ function getUrl(url) {
     if(lower)
         resultURL.includes('?') ? resultURL += '&'+lower : resultURL += '?'+lower;
 
-    let upper = getFilterByLowerPrice();
+    let upper = getFilterByUpperPrice();
     if(upper)
         resultURL.includes('?') ? resultURL += '&'+upper : resultURL += '?'+upper;
 
