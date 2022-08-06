@@ -1,0 +1,13 @@
+section { height: 100%; }
+
+.divider {
+    background-color: #C84B31;
+    border-top-width: 0.15rem;
+}
+
+.album { width: 10rem; }
+
+.song img {
+    width: 10rem;
+    height: 100%;
+}

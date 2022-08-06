@@ -1,0 +1,38 @@
+<div>
+    <mat-toolbar class="d-flex p-1">            
+        <button mat-icon-button class="example-icon search-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </mat-toolbar>        
+</div>
+<section class="container-fluid full">    
+    <div class="d-flex flex-column align-items-center">
+        <img src="assets/images/imagenInicial.png" alt="Imagen Cancion" class="my-4">
+        <h1>Cancion</h1>
+        <h2>Nombre Album</h2>
+        <h3>Artista</h3>
+
+        <div class="my-1 slider-container">
+            <mat-slider aria-label="unit(s)" class="music-slider"></mat-slider>
+        </div>
+
+        <div class="mb-3 button-container">
+            <!-- <button mat-button="" *ngif="!state?.playing">-->
+            <button mat-icon-button >
+                <mat-icon mat-list-icon="">play_arrow</mat-icon>
+            </button>
+
+            <!-- <button mat-button="" *ngif="state?.playing"> -->
+            <button mat-icon-button >                
+                <mat-icon mat-list-icon="">pause</mat-icon>
+            </button>                
+        </div>
+        <div class="my-2 text-center">
+            <h2 class="m-0">Liricas</h2>
+            <mat-divider class="divider"></mat-divider>            
+        </div>
+        <div class="text-center">
+            <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, minima temporibus. Assumenda aliquam, voluptas laborum voluptatem beatae minus inventore repellendus totam? Dolorem, rerum. Autem enim, quasi dignissimos earum modi nihil!</p>
+        </div>
+    </div>
+</section>

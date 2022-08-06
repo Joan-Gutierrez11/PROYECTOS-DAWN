@@ -1,0 +1,62 @@
+<div>
+    <mat-toolbar class="d-flex p-1">            
+        <button mat-icon-button class="example-icon search-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </mat-toolbar>        
+</div>
+<div class="album-image d-flex flex-column justify-content-end" style="background-image: url('assets/images/imagenInicial.png');">
+    <h1 class="px-3">Nombre Album</h1>
+    <h4 class="px-3">Fecha Publicacion: dd/mm/yyyy</h4>
+    <h5 class="px-3">Duracion total</h5>
+</div>    
+<section class="container-fluid full">  
+
+    <h2 class="m-0">Artistas</h2>
+    <mat-divider class="divider"></mat-divider>  
+
+    <div class="row overflow-auto horizontal-lists mt-3">
+        <!-- ARTISTA CARD -->
+        <div class="card app-cards mx-2 artist">
+            <img src="assets/images/imagenInicial.png" class="card-img-top" alt="...">
+            <div class="card-body">                
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+        <!--  -->        
+        <div class="card app-cards mx-2 artist">
+          <img src="assets/images/imagenInicial.png" class="card-img-top" alt="...">
+          <div class="card-body">                
+              <p class="card-text">Artista</p>
+          </div>
+        </div>
+        <div class="card app-cards mx-2 artist">
+          <img src="assets/images/imagenInicial.png" class="card-img-top" alt="...">
+          <div class="card-body">                
+              <p class="card-text">Artista</p>
+          </div>
+        </div>
+    </div>
+    
+    <h2 class="m-0">Canciones</h2>
+    <mat-divider class="divider"></mat-divider>  
+
+    <!-- SONG CARD -->
+    <div class="mt-3">
+        <div class="card app-cards mb-3 song">
+            <div class="row g-0 p-1">
+              <div class="d-flex justify-content-center col-4 col-md-3 px-1">
+                <img src="assets/images/imagenInicial.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-8 col-md-9">
+                <div class="card-body">
+                  <h4 class="card-title">Cancion</h4>
+                  <p class="card-text">Album</p>
+                  <p class="card-text">Duracion: 00:00</p>
+                </div>
+              </div>
+            </div>
+        </div>            
+    </div>
+    <!-- SONG CARD -->    
+</section>

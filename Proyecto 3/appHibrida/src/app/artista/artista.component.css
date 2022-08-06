@@ -1,0 +1,11 @@
+.artist-image {
+    background-size: contain;
+    background-repeat: no-repeat;    
+    background-position: 50%;
+    height: 60vh;    
+}
+
+.song img {
+    width: 10rem;
+    height: 100%;
+}

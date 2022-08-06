@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%; 
+    background-color: #191919;
+    color: #FFFFFF;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+img { border-radius: 5px;}
+
+
+/* Cartas de albumes y canciones */
+.app-cards {
+    background: linear-gradient(0deg, #191919, #191919), rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+/* Divs con lista de cartas horizontales */
+.horizontal-lists {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.horizontal-lists::-webkit-scrollbar { display: none; }
+
+/* Cambio de color de la barra de progreso */
+.mat-slider-thumb { background-color: #C84B31 !important; }
+.mat-slider-thumb-label { background-color: #C84B31 !important; }
+.mat-slider-track-fill { background-color: #C84B31 !important; }
