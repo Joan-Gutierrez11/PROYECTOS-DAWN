@@ -20,6 +20,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
+import { BusquedaComponent } from './busqueda/busqueda.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -30,7 +33,8 @@ import { MatSliderModule } from '@angular/material/slider';
     PrincipalComponent,
     CancionComponent,
     AlbumComponent,
-    ArtistaComponent
+    ArtistaComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { MatSliderModule } from '@angular/material/slider';
     MatIconModule,
     MatDividerModule,
     MatCardModule,
-    MatSliderModule
+    MatSliderModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
