@@ -5,22 +5,24 @@
         </button>
     </mat-toolbar>        
 </div>
-<div class="album-image d-flex flex-column justify-content-end" style="background-image: url('assets/images/imagenInicial.png');">
-    <h1 class="px-3">Nombre Album</h1>
-    <h4 class="px-3">Fecha Publicacion: dd/mm/yyyy</h4>
-    <h5 class="px-3">Duracion total</h5>
+<div class="bg-image album-image d-flex flex-column justify-content-end" style="background-image: url('{{album.imagen}}');">
+    <div class="mask d-flex flex-column justify-content-end" id="info-mask">
+        <h1 class="px-3">{{album.nombre}}</h1>
+        <h4 class="px-3">{{album.fecha_publicacion}}</h4>
+        <!-- <h5 class="px-3">{{album.duracion}}</h5> -->
+    </div>    
 </div>    
 <section class="container-fluid full">  
 
     <h2 class="m-0">Artistas</h2>
     <mat-divider class="divider"></mat-divider>  
 
-    <div class="row overflow-auto horizontal-lists mt-3" routerLink="/artista">
+    <div class="row overflow-auto horizontal-lists mt-3">
         <!-- ARTISTA CARD -->
-        <div class="card app-cards mx-2 artist">
-            <img src="assets/images/imagenInicial.png" class="card-img-top py-2" alt="...">
+        <div class="card app-cards mx-2 artist" [routerLink]="['/artista', artista.id]" *ngFor="let artista of album.artistasDelAlbum">
+            <img src="{{artista.foto}}" class="card-img-top py-2" alt="{{artista.foto}}">
             <div class="card-body">                
-                <p class="card-text">Artista</p>
+                <p class="card-text">{{artista.nombre}}</p>
             </div>
         </div>
         <!--  -->                
@@ -31,16 +33,16 @@
 
     <!-- SONG CARD -->
     <div class="mt-3">
-        <div class="card app-cards mb-3 song" routerLink="/cancion">
+        <div class="card app-cards mb-3 song" [routerLink]="['/cancion', cancion.id]" *ngFor="let cancion of cancionesAlbum">
             <div class="row g-0 p-1">
               <div class="d-flex justify-content-center col-4 col-md-3 px-1">
-                <img src="assets/images/imagenInicial.png" class="img-fluid rounded-start" alt="...">
+                <img src="{{cancion.imagen}}" class="img-fluid rounded-start" alt="{{cancion.nombreCancion}}">
               </div>
               <div class="col-8 col-md-9">
                 <div class="card-body">
-                  <h4 class="card-title">Cancion</h4>
-                  <p class="card-text">Album</p>
-                  <p class="card-text">Duracion: 00:00</p>
+                    <h4 class="card-title">{{cancion.nombreCancion}}</h4>
+                    <p class="card-text">{{cancion.nombreAlbum}}</p>
+                    <p class="card-text">Duracion: {{cancion.duracion}}</p>
                 </div>
               </div>
             </div>

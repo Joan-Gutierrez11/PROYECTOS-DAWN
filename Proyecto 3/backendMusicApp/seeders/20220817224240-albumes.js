@@ -1,5 +1,7 @@
 'use strict';
 
+const mockDataAlbum = require('../data_generator/datosAlbum.json')
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
@@ -11,13 +13,18 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    for (let i = 0; i <10; i++) {  
-      await queryInterface.bulkInsert('album', [{  
-          nombre: 'Album '+i,
-          fecha_publicacion: new Date(),          
-          imagen: 'url/portada'
-      }], {});  
-   }     
+
+    let dataUp = []
+    
+    mockDataAlbum.forEach(data => {
+      dataUp.push({
+        nombre: data.nombre,
+        fecha_publicacion: new Date(data.fecha_publicacion),
+        imagen: data.imagen
+      })      
+    });      
+
+    await queryInterface.bulkInsert('album', dataUp, {});
   },
 
   async down (queryInterface, Sequelize) {
@@ -26,7 +33,10 @@ module.exports = {
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
-     */
-     await queryInterface.bulkDelete('album', null, {});  
+     */    
+    let sequelize = new Sequelize(require('../config/config.json').development);
+    await queryInterface.bulkDelete('album', null, {});     
+    
+    await sequelize.query("ALTER TABLE album AUTO_INCREMENT = 1;");    
   }
 };

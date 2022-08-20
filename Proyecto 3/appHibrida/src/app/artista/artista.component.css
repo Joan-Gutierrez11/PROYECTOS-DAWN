@@ -1,8 +1,13 @@
 .artist-image {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;    
     background-position: 50%;
-    height: 60vh;    
+    height: 60vh;     
+}
+
+#info-mask {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
 }
 
 .song img {

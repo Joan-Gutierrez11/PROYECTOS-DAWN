@@ -1,0 +1,27 @@
+{
+    "model":{
+        "type":"Object",
+        "value":{
+            "nombre":{
+                "type": "faker",
+                "value": "lorem.word"
+            },
+            "duracion":{
+                "type": "randomNumberBetween",
+                "value": [100000, 500000]
+            },
+            "letra":{
+                "type": "faker",
+                "value": "lorem.text"
+            },
+            "url_cancion":{
+                "type":"faker",
+                "value": "internet.url"
+            },
+            "album_id":{
+                "type": "randomNumberBetween",
+				"value": [1, 20]
+            }
+        }
+    }
+}

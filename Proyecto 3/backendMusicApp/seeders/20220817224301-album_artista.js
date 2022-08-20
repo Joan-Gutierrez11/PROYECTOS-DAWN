@@ -1,8 +1,6 @@
 'use strict';
 
-function random(min, max) {
-  return Math.floor((Math.random() * (max - min + 1)) + min);
-}
+const mockData = require('../data_generator/datosAlbumArtista.json');
 
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -14,13 +12,17 @@ module.exports = {
      *   name: 'John Doe',
      *   isBetaMember: false
      * }], {});
-    */
-    for (let i = 0; i < 10; i++) {
-      await queryInterface.bulkInsert('album_artista', [{
-        album_id: random(1, 10),
-        artista_id: random(1, 10)
-      }], {});
-    }
+    */        
+    let dataUp = []
+  
+    mockData.forEach(data => {      
+      dataUp.push({
+        album_id: parseInt(data.album_id),        
+        artista_id: parseInt(data.artista_id)
+      });      
+    });   
+    
+    await queryInterface.bulkInsert('album_artista', dataUp, {});
   },
 
   async down (queryInterface, Sequelize) {

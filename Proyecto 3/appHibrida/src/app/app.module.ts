@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+
 // Componentes
 import { PortadaComponent } from './portada/portada.component';
 import { PrincipalComponent } from "./principal/principal.component";
@@ -24,6 +28,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -47,9 +52,14 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatSliderModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy , useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

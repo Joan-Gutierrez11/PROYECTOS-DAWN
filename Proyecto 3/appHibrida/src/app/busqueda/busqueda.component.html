@@ -1,0 +1,33 @@
+<div>
+    <mat-toolbar class="d-flex justify-content-between p-1">            
+        <button mat-icon-button routerLink="/principal">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <mat-form-field class="input-search">            
+            <input type="text" [(ngModel)]="terminoBuscar" (input)="filtrarCanciones(terminoBuscar)" matInput />
+        </mat-form-field>        
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>        
+    </mat-toolbar>        
+</div>
+<section class="container-fluid full mt-1">
+    <h2 class="m-0">Resultados</h2>
+    <mat-divider id="result-divider"></mat-divider>
+    <div>
+      <div class="card app-cards mb-3 song" [routerLink]="['/cancion', cancion.id]" *ngFor="let cancion of cancionesFiltro">
+        <div class="row g-0 p-1">
+          <div class="d-flex justify-content-center col-4 col-md-3 px-1">
+            <img src="{{cancion.imagen}}" class="img-fluid rounded-start" alt="{{cancion.nombreCancion}}">
+          </div>
+          <div class="col-8 col-md-9">
+            <div class="card-body">
+              <h4 class="card-title">{{cancion.nombreCancion}}</h4>
+              <p class="card-text">{{cancion.nombreAlbum}}</p>
+              <p class="card-text">Duracion: {{cancion.duracion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+</section>

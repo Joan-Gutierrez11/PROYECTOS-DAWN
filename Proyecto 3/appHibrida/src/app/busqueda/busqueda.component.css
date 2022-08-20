@@ -1,0 +1,15 @@
+.search-bar {
+    width: 80%;
+}
+
+.input-search { width: 80%; }
+
+#result-divider {
+    background-color: #2D4263;
+    border-top-width: 0.15rem;
+}
+
+.song img {
+    width: 10rem;
+    height: 100%;
+}

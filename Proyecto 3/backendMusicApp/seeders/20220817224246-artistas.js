@@ -1,5 +1,7 @@
 'use strict';
 
+const mockDataArtista = require('../data_generator/datosArtista.json');
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
@@ -11,12 +13,17 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   for (let i = 0; i < 10; i++) {
-    await queryInterface.bulkInsert('artista', [{
-      nombre:'artista'+i,
-      foto: 'url/foto'
-    }], {});
-   }
+     
+    let dataUp = []
+    
+    mockDataArtista.forEach(data => {
+      dataUp.push({
+        nombre: data.nombre,        
+        foto: data.foto
+      })      
+    });   
+    
+    await queryInterface.bulkInsert('artista', dataUp, {});    
   },
 
   async down (queryInterface, Sequelize) {
@@ -25,7 +32,10 @@ module.exports = {
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
-     */
-     await queryInterface.bulkDelete('artista', null, {});
+     */  
+    let sequelize = new Sequelize(require('../config/config.json').development);
+    await queryInterface.bulkDelete('artista', null, {});    
+    
+    await sequelize.query("ALTER TABLE artista AUTO_INCREMENT = 1;");     
   }
 };

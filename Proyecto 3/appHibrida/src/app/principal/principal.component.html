@@ -13,35 +13,14 @@
       <mat-divider class="divider"></mat-divider>
       <div class="row overflow-auto horizontal-lists mt-3">
           <!-- ALBUM CARD -->
-          <div class="card app-cards album mx-2" routerLink="/album">
-              <img src="assets/images/imagenInicial.png" class="card-img-top py-2" alt="...">
+          <div class="card app-cards album mx-2" [routerLink]="['/album', album.id]" *ngFor="let album of albumes">
+              <img src="{{album.imagen}}" class="card-img-top" alt="{{album.imagen}}">
               <div class="card-body">
-                  <h4>Nombre Album</h4>
-                  <p class="card-text">Artista</p>
+                  <h4>{{album.nombre}}</h4>
+                  <p class="card-text">{{album.fecha_publicacion}}</p>
               </div>
           </div>
-          <!--  --> 
-          <div class="card app-cards album mx-2" routerLink="/album">
-            <img src="assets/images/imagenInicial.png" class="card-img-top py-2" alt="...">
-            <div class="card-body">
-                <h4>Nombre Album</h4>
-                <p class="card-text">Artista</p>
-            </div>
-          </div>
-          <div class="card app-cards album mx-2" routerLink="/album">
-            <img src="assets/images/imagenInicial.png" class="card-img-top py-2" alt="...">
-            <div class="card-body">
-                <h4>Nombre Album</h4>
-                <p class="card-text">Artista</p>
-            </div>
-          </div>
-          <div class="card app-cards album mx-2" routerLink="/album">
-            <img src="assets/images/imagenInicial.png" class="card-img-top py-2" alt="...">
-            <div class="card-body">
-                <h4>Nombre Album</h4>
-                <p class="card-text">Artista</p>
-            </div>
-          </div>
+          <!--  -->           
       </div>
   </div>
 
@@ -50,49 +29,21 @@
       <mat-divider class="divider"></mat-divider>      
       <div class="song-list mt-3">
           <!-- SONG CARD -->
-          <div class="card app-cards mb-3 song" routerLink="/cancion">
+          <div class="card app-cards mb-3 song" [routerLink]="['/cancion', cancion.id]" *ngFor="let cancion of canciones">
               <div class="row g-0 p-1">
                 <div class="d-flex justify-content-center col-4 col-md-3 px-1">
-                  <img src="assets/images/imagenInicial.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{cancion.imagen}}" class="img-fluid rounded-start" alt="{{cancion.nombreCancion}}">
                 </div>
                 <div class="col-8 col-md-9">
                   <div class="card-body">
-                    <h4 class="card-title">Cancion</h4>
-                    <p class="card-text">Album</p>
-                    <p class="card-text">Duracion: 00:00</p>
+                    <h4 class="card-title">{{cancion.nombreCancion}}</h4>
+                    <p class="card-text">{{cancion.nombreAlbum}}</p>
+                    <p class="card-text">Duracion: {{milisegundosAMinutosYSegundos(cancion.duracion)}}</p>
                   </div>
                 </div>
               </div>
           </div>
-          <!-- SONG CARD -->
-          <div class="card app-cards mb-3 song" routerLink="/cancion">
-            <div class="row g-0 p-1">
-              <div class="d-flex justify-content-center col-4 col-md-3 px-1">
-                <img src="assets/images/imagenInicial.png" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-8 col-md-9">
-                <div class="card-body">
-                  <h4 class="card-title">Cancion</h4>
-                  <p class="card-text">Album</p>
-                  <p class="card-text">Duracion: 00:00</p>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="card app-cards mb-3 song" routerLink="/cancion">
-          <div class="row g-0 p-1">
-            <div class="d-flex justify-content-center col-4 col-md-3 px-1">
-              <img src="assets/images/imagenInicial.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-8 col-md-9">
-              <div class="card-body">
-                <h4 class="card-title">Cancion</h4>
-                <p class="card-text">Album</p>
-                <p class="card-text">Duracion: 00:00</p>
-              </div>
-            </div>
-          </div>
-        </div>            
+          <!-- SONG CARD -->                  
       </div>      
   </div>    
 </section>
