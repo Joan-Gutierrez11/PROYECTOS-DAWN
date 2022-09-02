@@ -1,0 +1,34 @@
+[
+    {
+        "nombre": "Michael Jackson",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eba2a0b9e3448c1e702de9dc90"
+    },
+    {
+        "nombre": "Nirvana",
+        "foto": "https://i.scdn.co/image/84282c28d851a700132356381fcfbadc67ff498b"
+    },
+    {
+        "nombre": "Elvis Presley",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eb9a93e273380982dff84c0d7c"
+    },
+    {
+        "nombre": "Guns N' Roses",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eb50defaf9fc059a1efc541f4c"
+    },
+    {
+        "nombre": "Stone Temple Pilots",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eb4bb64f87db255d76538b905f"
+    },
+    {
+        "nombre": "Linkin Park",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eb34e5aa6afc1ba147bfbb0677"
+    },
+    {
+        "nombre": "TOTO",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eba59a5bcab211f964fe9bfb06"
+    },
+    {
+        "nombre": "Alice In Chains",
+        "foto": "https://i.scdn.co/image/ab6761610000e5eb6114a63659d0d5c0a801f733"
+    }
+]

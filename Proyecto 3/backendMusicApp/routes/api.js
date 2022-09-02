@@ -76,9 +76,10 @@ router.get('/albumes/:id', function(req, res, next){
 router.get('/cancion/:idCancion', async function(req, res, next) {
   let id = req.params.idCancion;
   let datos = await db.ref('collection').orderByKey().equalTo(id).once('value');
-  let album = await models.album.findOne({where:datos[id.toString()]});
-  
   datos = datos.toJSON();
+
+  let idAlbum = datos[id.toString()]['album_id'];
+  let album = await models.album.findOne({where:idAlbum});
 
   let datoCancion = {
     nombreCancion: datos[id].nombre,
@@ -113,7 +114,7 @@ router.get('/canciones/max=:num', async function(req, res, next){
           nombreAlbum: diccAlbumes[elem['album_id']]['nombre'],
           imagen: diccAlbumes[elem['album_id']]['imagen'],
           duracion: elem['duracion']
-        });        
+        });
       }
       res.json(canciones);
     });
@@ -124,9 +125,7 @@ router.get('/canciones/max=:num', async function(req, res, next){
 router.get('/canciones/album/:albumId', function(req, res, next){
   let idAlbum = parseInt(req.params.albumId);
 
-  models.album.findOne({
-    where:{ id:idAlbum }
-  })
+  models.album.findOne({where:{ id:idAlbum }})
   .then(album => {        
     db.ref('collection').orderByChild('album_id').equalTo(idAlbum).on('value', sn => {
       let canciones = [];

@@ -1,0 +1,170 @@
+[
+    {
+        "artista_id": 1,
+        "album_id": 1
+    },
+    {
+        "artista_id": 1,
+        "album_id": 2
+    },
+    {
+        "artista_id": 1,
+        "album_id": 3
+    },
+    {
+        "artista_id": 1,
+        "album_id": 4
+    },
+    {
+        "artista_id": 1,
+        "album_id": 5
+    },
+    {
+        "artista_id": 2,
+        "album_id": 6
+    },
+    {
+        "artista_id": 2,
+        "album_id": 7
+    },
+    {
+        "artista_id": 2,
+        "album_id": 8
+    },
+    {
+        "artista_id": 2,
+        "album_id": 9
+    },
+    {
+        "artista_id": 2,
+        "album_id": 10
+    },
+    {
+        "artista_id": 3,
+        "album_id": 11
+    },
+    {
+        "artista_id": 3,
+        "album_id": 12
+    },
+    {
+        "artista_id": 3,
+        "album_id": 13
+    },
+    {
+        "artista_id": 3,
+        "album_id": 14
+    },
+    {
+        "artista_id": 3,
+        "album_id": 15
+    },
+    {
+        "artista_id": 4,
+        "album_id": 16
+    },
+    {
+        "artista_id": 4,
+        "album_id": 17
+    },
+    {
+        "artista_id": 4,
+        "album_id": 18
+    },
+    {
+        "artista_id": 4,
+        "album_id": 19
+    },
+    {
+        "artista_id": 4,
+        "album_id": 20
+    },
+    {
+        "artista_id": 5,
+        "album_id": 21
+    },
+    {
+        "artista_id": 5,
+        "album_id": 22
+    },
+    {
+        "artista_id": 5,
+        "album_id": 23
+    },
+    {
+        "artista_id": 5,
+        "album_id": 24
+    },
+    {
+        "artista_id": 5,
+        "album_id": 25
+    },
+    {
+        "artista_id": 6,
+        "album_id": 26
+    },
+    {
+        "artista_id": 6,
+        "album_id": 27
+    },
+    {
+        "artista_id": 6,
+        "album_id": 28
+    },
+    {
+        "artista_id": 6,
+        "album_id": 29
+    },
+    {
+        "artista_id": 6,
+        "album_id": 30
+    },
+    {
+        "artista_id": 7,
+        "album_id": 31
+    },
+    {
+        "artista_id": 7,
+        "album_id": 32
+    },
+    {
+        "artista_id": 7,
+        "album_id": 33
+    },
+    {
+        "artista_id": 7,
+        "album_id": 34
+    },
+    {
+        "artista_id": 7,
+        "album_id": 35
+    },
+    {
+        "artista_id": 8,
+        "album_id": 36
+    },
+    {
+        "artista_id": 8,
+        "album_id": 37
+    },
+    {
+        "artista_id": 8,
+        "album_id": 38
+    },
+    {
+        "artista_id": 8,
+        "album_id": 39
+    },
+    {
+        "artista_id": 8,
+        "album_id": 40
+    },
+    {
+        "artista_id": 8,
+        "album_id": 20
+    },
+    {
+        "artista_id": 8,
+        "album_id": 30
+    }
+]

@@ -1,6 +1,6 @@
 'use strict';
 
-const mockDataArtista = require('../data_generator/datosArtista.json');
+const mockDataArtista = require('../data_generator/artists.json');
 
 module.exports = {
   async up (queryInterface, Sequelize) {
