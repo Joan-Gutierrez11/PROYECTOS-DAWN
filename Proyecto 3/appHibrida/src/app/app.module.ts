@@ -53,7 +53,6 @@ import { HttpClientModule } from "@angular/common/http";
     MatSliderModule,
     MatInputModule,
     MatSelectModule,
-
     HttpClientModule,
     FormsModule
   ],

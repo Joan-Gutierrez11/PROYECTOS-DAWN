@@ -6,10 +6,7 @@ import { Artista } from '../interfaz/artista';
   providedIn: 'root'
 })
 export class ArtistaService {
-  artista: Artista = {
-    id:-1, nombre:'', foto:'', albumesDeArtista:[]
-  }
-
+  
   constructor(private http: HttpClient) { }
 
   obtenerArtistas(){
@@ -18,9 +15,6 @@ export class ArtistaService {
 
   obtenerArtistaPorId(id:number){
     return this.http.get('http://localhost:3000/api/artistas/'+id.toString());
-  }
-
-  obtenerAlbumesArtista(id:number){    
   }
 
 }

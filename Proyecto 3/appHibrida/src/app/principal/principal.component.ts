@@ -38,11 +38,15 @@ export class PrincipalComponent implements OnInit {
       return "" + valor;
     }
   }
+  
   milisegundosAMinutosYSegundos = (milisegundos:number) => {
-    const minutos = milisegundos / 1000 / 60;
-    milisegundos -= minutos * 60 * 1000;
-    const segundos = (milisegundos / 1000);
-    return `${this.agregarCeroSiEsNecesario(minutos)}:${this.agregarCeroSiEsNecesario(segundos)}`;
+    let minutes = Math.floor(milisegundos / 60000);
+    let seconds = ((milisegundos % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (parseInt(seconds) < 10 ? '0' : '') + seconds;
   };
+
+  mostrarTituloMinimizado(titulo: string){
+    return titulo.length > 15 ? titulo.slice(0, 15) + '...': titulo;
+  }
 
 }

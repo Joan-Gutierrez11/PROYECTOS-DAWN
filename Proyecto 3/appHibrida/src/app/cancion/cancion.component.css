@@ -15,6 +15,7 @@ img { width: 70vw; }
 
 .music-slider { width: 80%; }
 
+
 @media screen and (min-width:900px) {
     img { width: 30vw;}
 }

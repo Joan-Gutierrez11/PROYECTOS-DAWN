@@ -16,7 +16,7 @@
           <div class="card app-cards album mx-2" [routerLink]="['/album', album.id]" *ngFor="let album of albumes">
               <img src="{{album.imagen}}" class="card-img-top" alt="{{album.imagen}}">
               <div class="card-body">
-                  <h4>{{album.nombre}}</h4>
+                  <h4>{{ mostrarTituloMinimizado(album.nombre) }}</h4>
                   <p class="card-text">{{album.fecha_publicacion}}</p>
               </div>
           </div>
@@ -36,9 +36,9 @@
                 </div>
                 <div class="col-8 col-md-9">
                   <div class="card-body">
-                    <h4 class="card-title">{{cancion.nombreCancion}}</h4>
-                    <p class="card-text">{{cancion.nombreAlbum}}</p>
-                    <p class="card-text">Duracion: {{milisegundosAMinutosYSegundos(cancion.duracion)}}</p>
+                    <h4 class="card-title">{{ mostrarTituloMinimizado(cancion.nombreCancion) }}</h4>
+                    <p class="card-text">{{ mostrarTituloMinimizado(cancion.nombreAlbum) }}</p>
+                    <p class="card-text">Duracion: {{ milisegundosAMinutosYSegundos(cancion.duracion) }}</p>
                   </div>
                 </div>
               </div>

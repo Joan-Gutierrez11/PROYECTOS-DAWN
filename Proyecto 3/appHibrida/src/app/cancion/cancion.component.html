@@ -6,25 +6,25 @@
     </mat-toolbar>        
 </div>
 <section class="container-fluid full">    
-    <div class="d-flex flex-column align-items-center">
+    <div class="d-flex flex-column align-items-center text-center">
         <img src="{{cancion.imagen}}" alt="{{cancion.nombreCancion}}" class="my-4">
         <h1>{{cancion.nombreCancion}}</h1>
         <h2>{{cancion.nombreAlbum}}</h2>
         <!-- <h3>Artista</h3> -->
 
         <div class="my-1 slider-container">
-            <mat-slider aria-label="unit(s)" class="music-slider"></mat-slider>
+            <mat-slider [(ngModel)]="progresoCancion" max="100" aria-label="unit(s)" class="music-slider" #musicSlider (change)="visualizar()"></mat-slider>
         </div>
 
         <div class="mb-3 button-container">
             <!-- <button mat-button="" *ngif="!state?.playing">-->
-            <button mat-icon-button >
-                <mat-icon mat-list-icon="">play_arrow</mat-icon>
+            <button mat-icon-button *ngIf="!this.reproduciendo" (click)="play()">
+                <mat-icon>play_arrow</mat-icon>
             </button>
 
             <!-- <button mat-button="" *ngif="state?.playing"> -->
-            <button mat-icon-button >                
-                <mat-icon mat-list-icon="">pause</mat-icon>
+            <button mat-icon-button *ngIf="this.reproduciendo" (click)="stop()">                
+                <mat-icon>pause</mat-icon>
             </button>                
         </div>
         <div class="my-2 text-center">

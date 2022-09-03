@@ -22,9 +22,9 @@
           </div>
           <div class="col-8 col-md-9">
             <div class="card-body">
-              <h4 class="card-title">{{cancion.nombreCancion}}</h4>
-              <p class="card-text">{{cancion.nombreAlbum}}</p>
-              <p class="card-text">Duracion: {{cancion.duracion}}</p>
+              <h4 class="card-title">{{ mostrarTituloMinimizado(cancion.nombreCancion) }}</h4>
+              <p class="card-text">{{ mostrarTituloMinimizado(cancion.nombreAlbum) }}</p>
+              <p class="card-text">Duracion: {{ milisegundosAMinutosYSegundos(cancion.duracion) }}</p>
             </div>
           </div>
         </div>
