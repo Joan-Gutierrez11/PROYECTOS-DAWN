@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title><% title %></title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link rel='stylesheet' href='/stylesheets/dashboard.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <% include partials/header %>
+    <div class="container-fluid">
+      <div class="row">
+        <% include partials/sidebar %>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Documentacion de la API</h1>
+          </div>
+          
+          <div class="my-2">
+            <h3 class="my-3">Endpoints de Canciones</h3>
+            <ul>
+                <li class="text-endpoint my-2">
+                  <code>http://localhost:3000/api/cancion/{id}</code>
+                </li>
+                <li class="text-endpoint my-2">
+                  <code>http://localhost:3000/api/canciones/max={valor}</code>
+                </li>
+                <li class="text-endpoint my-2">
+                  <code>http://localhost:3000/api/canciones/album/{albumID}</code>
+                </li>
+                <li class="text-endpoint my-2">
+                  <code>http://localhost:3000/api/canciones/{artistaID}</code>
+                </li>
+              </ul>
+          </div>
+
+          <div class="my-2">
+            <h4 class="my-3">Listado de Endpoints</h4>
+
+            <div class="row text-endpoint border-bottom my-4 py-4">
+                <div class="col-6">
+                    <span class="me-2">Endpoint para obtener los datos una cancion de la base de datos no relacional: </span><br>
+                    <span>Ejemplo: </span><br>
+                    <code>http://localhost:3000/api/cancion/{id}</code>
+                    <ul>
+                      <li><strong>id: </strong> Hace referencia a la id de la cancion.</li>
+                    </ul>            
+                </div>
+                <div class="col-6">
+                    <h5>Ejemplo: </h5>
+                    <strong>http://localhost:3000/api/cancion/1</strong><br>
+                    <code>
+                      {
+                        "nombreCancion": "voluptatem",
+                        "imagen": "https://i.scdn.co/image/ab67616d0000b273a304e418d7a5d524140b1d56",
+                        "nombreAlbum": "ザ・ベスト・オブ・エルヴィス ゴールデン・コレクション",
+                        "duracion": 175587,
+                        "url_cancion": "https://p.scdn.co/mp3-preview/8dac04919452598b11b58e64f74ff26948a31a0d?cid=5389212a208a43f5a2d0355d946249b0",
+                        "album_id": 13,
+                        "letra": "illo ex nostrum"
+                      }
+                    </code>
+                </div>
+            </div>
+
+            <div class="row text-endpoint border-bottom my-4 py-4">
+                <div class="col-6">
+                    <span class="me-2">Endpoint para obtener los datos de las canciones de la base de datos no relacional: </span><br>
+                    <span>Ejemplo: </span><br>
+                    <code>http://localhost:3000/api/canciones/max={valor}</code>
+                    <ul>
+                        <li><strong>valor: </strong> Hace referencia al maximo de objetos que quiere que le devuelva la API.</li>
+                    </ul>
+                </div>
+                <div class="col-6">      
+                    <h5>Ejemplo: </h5>
+                    <strong>http://localhost:3000/api/canciones/max=2</strong><br>
+                    <code>
+                      [
+                        {
+                          "id": "998",
+                          "nombreCancion": "ipsam",
+                          "nombreAlbum": "Michael",
+                          "imagen": "https://i.scdn.co/image/ab67616d0000b273a7ef06d1e0bad6fe2ff028f6",
+                          "duracion": 158792
+                        },
+                        
+                        {
+                          "id": "999",
+                          "nombreCancion": "distinctio",
+                          "nombreAlbum": "Purple (2019 Remaster; Super Deluxe)",
+                          "imagen": "https://i.scdn.co/image/ab67616d0000b273321175842c7c2e55c9537573",
+                          "duracion": 161545
+                        }
+                      ]
+                    </code>
+                </div>
+            </div>
+
+            <div class="row text-endpoint border-bottom my-4 py-4">
+              <div class="col-6">
+                  <span class="me-2">Endpoint para obtener los datos de todas las canciones de un album: </span><br>
+                  <span>Ejemplo: </span><br>
+                  <code>http://localhost:3000/api/canciones/album/{albumID}</code>
+                  <ul>
+                    <li><strong>albumID: </strong> Hace referencia al id del album del cual queremos las canciones.</li>
+                  </ul>
+              </div>
+              <div class="col-6">
+                  <h5>Ejemplo: </h5>
+                  <strong>http://localhost:3000/api/canciones/album/1</strong><br>
+                  <code>
+                    [
+                      {
+                        "id": "38",
+                        "nombreCancion": "est",
+                        "nombreAlbum": "Scream",
+                        "imagen": "https://i.scdn.co/image/ab67616d0000b273cde37cfdee48dc0eae1e2ab8",
+                        "duracion": 135931
+                      },...
+                    ]                      
+                  </code>
+              </div>
+          </div>
+
+          <div class="row text-endpoint border-bottom my-4 py-4">
+            <div class="col-6">
+                <span class="me-2">Endpoint para obtener los datos de las canciones de un artista: </span><br>
+                <span>Ejemplo: </span><br>
+                <code>http://localhost:3000/api/canciones/{artistaID}</code>
+                <ul>
+                  <li><strong>artistaID: </strong> Hace referencia al id del artista del cual queremos las canciones.</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h5>Ejemplo: </h5>
+                <strong>http://localhost:3000/api/canciones/1</strong><br>
+                <code>
+                  [
+                    {
+                      "id": "38",
+                      "nombreCancion": "est",
+                      "nombreAlbum": "Scream",
+                      "imagen": "https://i.scdn.co/image/ab67616d0000b273cde37cfdee48dc0eae1e2ab8",
+                      "duracion": 135931
+                    }, ...
+                  ]
+                </code>
+            </div>
+        </div>
+            
+          </div>
+
+        </main>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+    <script src="/javascripts/dashboard.js"></script>
+  </body>
+</html>
