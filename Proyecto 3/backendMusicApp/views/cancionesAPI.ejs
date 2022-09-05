@@ -76,17 +76,9 @@
                 <div class="col-6">
                     <h5>Ejemplo: </h5>
                     <strong>http://localhost:3000/api/cancion/1</strong><br>
-                    <code>
-                      {
-                        "nombreCancion": "voluptatem",
-                        "imagen": "https://i.scdn.co/image/ab67616d0000b273a304e418d7a5d524140b1d56",
-                        "nombreAlbum": "ザ・ベスト・オブ・エルヴィス ゴールデン・コレクション",
-                        "duracion": 175587,
-                        "url_cancion": "https://p.scdn.co/mp3-preview/8dac04919452598b11b58e64f74ff26948a31a0d?cid=5389212a208a43f5a2d0355d946249b0",
-                        "album_id": 13,
-                        "letra": "illo ex nostrum"
-                      }
-                    </code>
+                    <pre id="cancion-result-id">
+                      
+                    </pre>
                 </div>
             </div>
 
@@ -102,25 +94,9 @@
                 <div class="col-6">      
                     <h5>Ejemplo: </h5>
                     <strong>http://localhost:3000/api/canciones/max=2</strong><br>
-                    <code>
-                      [
-                        {
-                          "id": "998",
-                          "nombreCancion": "ipsam",
-                          "nombreAlbum": "Michael",
-                          "imagen": "https://i.scdn.co/image/ab67616d0000b273a7ef06d1e0bad6fe2ff028f6",
-                          "duracion": 158792
-                        },
-                        
-                        {
-                          "id": "999",
-                          "nombreCancion": "distinctio",
-                          "nombreAlbum": "Purple (2019 Remaster; Super Deluxe)",
-                          "imagen": "https://i.scdn.co/image/ab67616d0000b273321175842c7c2e55c9537573",
-                          "duracion": 161545
-                        }
-                      ]
-                    </code>
+                    <pre id="canciones-result">
+                      
+                    </pre>
                 </div>
             </div>
 
@@ -136,17 +112,9 @@
               <div class="col-6">
                   <h5>Ejemplo: </h5>
                   <strong>http://localhost:3000/api/canciones/album/1</strong><br>
-                  <code>
-                    [
-                      {
-                        "id": "38",
-                        "nombreCancion": "est",
-                        "nombreAlbum": "Scream",
-                        "imagen": "https://i.scdn.co/image/ab67616d0000b273cde37cfdee48dc0eae1e2ab8",
-                        "duracion": 135931
-                      },...
-                    ]                      
-                  </code>
+                  <pre id="canciones-album-result">
+                    
+                  </pre>
               </div>
           </div>
 
@@ -162,17 +130,9 @@
             <div class="col-6">
                 <h5>Ejemplo: </h5>
                 <strong>http://localhost:3000/api/canciones/1</strong><br>
-                <code>
-                  [
-                    {
-                      "id": "38",
-                      "nombreCancion": "est",
-                      "nombreAlbum": "Scream",
-                      "imagen": "https://i.scdn.co/image/ab67616d0000b273cde37cfdee48dc0eae1e2ab8",
-                      "duracion": 135931
-                    }, ...
-                  ]
-                </code>
+                <pre id="cancion-artista">
+                  
+                </pre>
             </div>
         </div>
             
@@ -184,5 +144,6 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
     <script src="/javascripts/dashboard.js"></script>
+    <script src="/javascripts/canciones.js"></script>
   </body>
 </html>
